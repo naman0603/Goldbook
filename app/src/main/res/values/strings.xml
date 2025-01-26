@@ -1,0 +1,856 @@
+<resources>
+    <string name="app_name">GoldBook</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_username_password">Forgot username / password?</string>
+    <string name="hello">Hello!</string>
+    <string name="please_sign_up_to_continue">Please sign up to continue</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forgot_credentials">Forgot Credentials</string>
+    <string name="select_which_contact_detail_to_use_to_recover_your_account">Select which contact detail to use to recover your account.</string>
+    <string name="next">Next</string>
+    <string name="downloadreport">Download Report</string>
+    <string name="generatereport">Generate Report</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="recover_account">Recover Account</string>
+    <string name="contact_information">Contact Details</string>
+    <string name="address_detail">Address Details</string>
+    <string name="new_customer">New Customer</string>
+    <string name="new_organization">New Organization</string>
+    <string name="new_itemcategory">New Item Category</string>
+    <string name="edit_itemcategory">Edit Item Category</string>
+    <string name="new_branch">New Branch</string>
+    <string name="edit_customer">Edit Customer</string>
+    <string name="edit_organization">Edit Organization</string>
+    <string name="edit_branch">Edit Branch</string>
+    <string name="new_item">New Item</string>
+    <string name="opening_stock">Opening Stock</string>
+    <string name="new_opening_stock">New Opening Stock</string>
+    <string name="edit_opening_stock">Edit Opening Stock</string>
+    <string name="what_would_you_like_to_update_it_to">What would you like to update it to?</string>
+    <string name="new_mobile_number">New mobile number</string>
+    <string name="new_email">New email</string>
+    <string name="save">Save</string>
+    <string name="done">Done</string>
+    <string name="almost_there">Almost there</string>
+    <string name="setup_your_organization_s_profile">Setup your organization\'s profile</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="app_language">App Language</string>
+    <string name="security">Security</string>
+    <string name="quick_setup">Quick setup</string>
+    <!--<string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>-->
+    <!--   <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>-->
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="payment">Payment</string>
+    <string name="customer">Customer</string>
+    <string name="reports">Reports</string>
+    <string name="report">Report</string>
+    <string name="receipt">Receipt</string>
+    <string name="purchase">Purchase</string>
+    <string name="purchase_bill">New Purchase Bill</string>
+    <string name="sale">Sale</string>
+    <string name="organization">Organizations</string>
+    <string name="item_categories">Item Categories</string>
+    <string name="branches">Branches</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="customers">Customers</string>
+    <string name="items">Items</string>
+    <string name="item">Item</string>
+    <string name="all_items">All Items</string>
+    <string name="add_item">Add Item</string>
+    <string name="add_charges">Add Charges</string>
+    <string name="qr_code">QR code</string>
+    <string name="new_invoice">New Invoice</string>
+    <string name="new_payment">New Payment</string>
+    <string name="new_receipt">New Receipt</string>
+    <string name="edit_receipt">Edit Receipt</string>
+    <string name="payment_reference">Payment Reference</string>
+    <string name="receipt_reference">Receipt Reference</string>
+    <string name="add_payment_line">Add Line</string>
+    <string name="add_finemetal">Add Fine / Metal</string>
+    <string name="add_ratecut">Add Rate-Cut (per gm)</string>
+    <string name="add_cash">Add Cash</string>
+    <string name="add_bank">Add Bank</string>
+    <string name="add_adjustment">Add Adjustment</string>
+    <string name="edit_finemetal">Edit Fine / Metal</string>
+    <string name="edit_ratecut">Edit Rate-Cut</string>
+    <string name="edit_cash">Edit Cash</string>
+    <string name="edit_bank">Edit Bank</string>
+    <string name="edit_adjustment">Edit Adjustment</string>
+    <string name="supplier">Suppliers</string>
+    <string name="all_supplier">All Suppliers</string>
+    <string name="new_supplier">New Supplier</string>
+    <string name="edit_supplier">Edit Supplier</string>
+
+    <string name="reportfragfullname">com.goldbookapp.ui.ui.send.ReportsFragment</string>
+    <string name="dashboardfragfullname">com.goldbookapp.ui.ui.home.DashboardFragment</string>
+    <string name="customerfragfullname">com.goldbookapp.ui.ui.gallery.CustomersFragment</string>
+    <string name="supplierfragfullname">com.goldbookapp.ui.fragment.SupplierFragment</string>
+    <string name="itemfragfullname">com.goldbookapp.ui.ui.slideshow.ItemsFragment</string>
+    <string name="salesfragfullname">com.goldbookapp.ui.fragment.SaleFragment</string>
+    <string name="purchasefragfullname">com.goldbookapp.ui.ui.share.PurchaseFragment</string>
+    <string name="paymentfragfullname">com.goldbookapp.ui.ui.send.PaymentFragment</string>
+    <string name="receiptfragfullname">  com.goldbookapp.ui.ui.send.ReceiptFragment</string>
+    <string name="openingStockfragfullname">com.goldbookapp.ui.ui.send.OpeningStockFragment</string>
+
+    <string name="contactaccountstatement">Detailed Contact A/c Statement</string>
+    <string name="summarycontactaccountstatement">Summary Contact A/c Statement</string>
+    <string name="stockstatement">Stock Statement</string>
+    <string name="salesregister">Sales Register</string>
+    <string name="purchaseregister">Purchase Register</string>
+    <string name="daybook">Day Book</string>
+    <string name="cashbankbook">Cash / Bank Book</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="please_check_internet_msg">Please check your internet connection and try again.</string>
+    <!--<string name="mobile_validation_msg">Please enter mobile number.</string>-->
+    <string name="mobile_digit_count">Please enter valid mobile number.</string>
+    <string name="name_validation_msg">Please enter name.</string>
+    <string name="dob_validation_msg">Please enter date of birth.</string>
+    <string name="gender_validation_msg">Please enter gender.</string>
+    <string name="email_validation_msg">Please enter valid email.</string>
+
+    <string name="skip_registration_validation_msg">Are you sure to skip registration process and go back?</string>
+    <string name="complete_registration_msg">Please complete the registration process.</string>
+    <string name="transactions">Transactions</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="account_info">Accounting Info</string>
+    <string name="inventory_info">Inventory Info</string>
+    <string name="send_statement">Send Statement</string>
+    <string name="mark_as_inactive">Mark as Inactive</string>
+    <string name="mark_as_active">Mark as Active</string>
+    <string name="delete">Delete</string>
+    <string name="all_customers">All Customers</string>
+    <string name="active_items">Active Items</string>
+    <string name="active_customers">Active Customers</string>
+    <string name="inactive_customers">Inactive Customers</string>
+    <string name="inactive_items">Inactive Items</string>
+    <string name="active_suppiler">Active Suppliers</string>
+    <string name="inactive_suppiler">Inactive Suppliers</string>
+    <string name="business">Business</string>
+    <string name="individual">Individual</string>
+    <string name="name">Name</string>
+    <string name="o_s_fine_bal">O/s Fine Bal</string>
+    <string name="o_s_cash_bal">O/s Cash Bal</string>
+    <string name="last_transaction">Last Transaction</string>
+    <string name="stock_in_hand">Stock-in-hand</string>
+    <string name="no_record_found">No records found!</string>
+    <string name="no_entries_found">No entries found!</string>
+    <string name="edit_item">Edit Item</string>
+
+    <string name="voucherhash">Voucher #</string>
+    <string name="date">Date</string>
+    <string name="voucher">Voucher No. </string>
+    <string name="invoiceno">Invoice No. </string>
+    <string name="purchaseno">Purchase No. </string>
+    <string name="paymentno">Payment No. </string>
+    <string name="receiptno">Receipt No. </string>
+    <string name="partyname">Party Name</string>
+    <string name="edit_invoice">Edit Invoice</string>
+    <string name="debit_credit">Debit or Credit</string>
+
+    // settings preference
+    //term of balance
+    <string name="setting_debit_credit">Debit &amp; Credit (Dr / Cr)</string>
+    <string name="setting_udhar_jama">Udhar &amp; Jama (U / J)</string>
+    <string name="setting_receivable_payable">Receivable &amp; Payable (Rec / Pay)</string>
+    <string name="setting_len_den">Len &amp; Den (L / D)</string>
+
+    // print copies
+    <string name="setting_custom">I will choose while printing</string>
+    <string name="setting_one">One Copy"</string>
+    <string name="setting_two">Two Copies</string>
+    <string name="setting_three">Three Copies</string>
+    <string name="setting_four">Four Copies</string>
+
+
+    //item stock type
+    <string name="touchwise">Touch-wise</string>
+    <string name="entrywise">Entry-wise</string>
+    <string name="udhar_jama">Udhar or Jama</string>
+    <string name="rec_pay">Receivables - Payables</string>
+    <string name="len_den">Len - Den</string>
+    <string name="debit">Debit</string>
+    <string name="credit">Credit</string>
+    <string name="udhar">Udhar</string>
+    <string name="jama">Jama</string>
+    <string name="len">Len</string>
+    <string name="den">Den</string>
+    <string name="receivable">Receivable</string>
+    <string name="payable">Payable</string>
+
+    <string name="save_close">Save &amp; Close</string>
+    <string name="save_add">Save &amp; Add</string>
+
+    <string name="gm">gm</string>
+    <!-- <string name="select_item_msg">Please select Item</string>-->
+    <string name="privacy_and_security">Privacy &amp; Security</string>
+    <string name="app_lock">App Lock</string>
+
+    <string name="two_factor_description">Protect your account from unauthorized access by requiring an OTP authentication in addition to your GoldBook password.</string>
+
+    <string name="selectstock">Select Stock to Pay / Issue</string>
+    <string name="editstock">Edit Stock to Pay / Issue</string>
+
+    <string name="selstock">Select Stock</string>
+
+
+    <string name="saveAndAddNew">
+
+<![CDATA[Save & Add New]]>
+</string>
+
+
+    <string name="saveAndClose">
+
+<![CDATA[Save & Close]]>
+</string>
+    <string name="editDeleteItemPaymentDialogTitle">Payment Item</string>
+    <string name="editDeleteItemReceiptDialogTitle">Receipt Item</string>
+    <string name="editDeleteItemDialogTitle">Invoice Item</string>
+    <string name="editDeleteItemPurchaseDialogTitle">Purchase Item</string>
+    <string name="editDeleteOpeningStockDialogTitle">Opening Stocks</string>
+    <string name="editDeleteItemDialogMessage">Do you want to edit or delete item?</string>
+    <string name="editDeleteOpeningStockDialogMessage">Do you want to edit or delete opening stock?</string>
+    <string name="editDeleteOpeningStockDialogPosbtn">Edit Stock</string>
+    <string name="editDeleteItemDialogPosbtn">Edit Item</string>
+
+    <string name="editDeleteOpeningStockDialogNeutralbtn">Delete Stock</string>
+    <string name="editDeleteItemDialogNeutralbtn">Delete Item</string>
+    <string name="DelOpeningStockDialogTitle">Delete Opening Stock</string>
+    <string name="DelDialogTitle">Delete Item</string>
+    <string name="DelOpeningStockDialogMessage">Are you sure to delete opening stock?</string>
+    <string name="DelDialogMessage">Are you sure to delete item?</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Delete">Delete</string>
+    <string name="Later">Later</string>
+    <string name="GiveReview">Yes,Give Us Review!!</string>
+    <string name="DialogTitleReview">Enjoying the App?</string>
+
+    //branch delete dialog
+    <string name="branchDelDialogTitle">Delete Branch</string>
+    <string name="branchDelDialogMessage">You are about to delete a branch with transactions already carried out impacting your financial. Are you sure you want to delete?</string>
+    <string name="branchDialogCancel">No, cancel</string>
+    <string name="branchDialogDelete">Yes, delete my branch</string>
+
+    <string name="companyDelDialogTitle">Delete Company</string>
+    <string name="companyDelDialogMsg">We will permanently delete below following data :\n\n</string>
+    <string name="companyDelDialogMsgPart">- Ledger Group &amp; Sub Group\n- Ledgers\n- Items &amp; Category\n- Unit\n- Contacts\n- Item Stock\n\n</string>
+    <string name="companyDelDialogMsgPart1">Are you sure that you want to delete\n </string>
+    <string name="companyDelDialogMessage">You can not undo this action.</string>
+    <string name="companyDialogDelete">Yes, delete my company</string>
+
+    //delete sale/purchase/payment/receipt dialog
+
+    <string name="delSaleDialog1Title">Delete Sale?</string>
+    <string name="saleDialog1Message">This will permanently delete sale. You won\'t be able to revert this!</string>
+    <string name="delPurchaseDialog1Title">Delete Purchase?</string>
+    <string name="purchaseDialog1Message">This will permanently delete purchase. You won\'t be able to revert this!</string>
+    <string name="delPaymentDialog1Title">Delete Payment?</string>
+    <string name="paymentDialog1Message">This will permanently delete payment. You won\'t be able to revert this!</string>
+    <string name="delReceiptDialog1Title">Delete Receipt?</string>
+    <string name="receiptDialog1Message">This will permanently delete receipt. You won\'t be able to revert this!</string>
+
+    // delete item category dialog
+    <string name="delItemCatDialog1Title">Can\'t Delete Item Category</string>
+    <string name="delItemCatDialog2Title">Delete Item Category?</string>
+    <string name="itemCatDialog1Message">This Item Category is associated in items created earlier hence it can not be deleted.</string>
+    <string name="itemCatDialog2Message">This will permanently delete Item Category. You won\'t be able to revert this!</string>
+
+    //delete Metal Colour
+    <string name="delMetalColorDialog2Title">Delete Metal Color?</string>
+    <string name="metalColorDialog2Message">This will permanently delete Metal Color. You won\'t be able to revert this!</string>
+
+    //delete Group
+    <string name="delGroupDialog2Title">Delete Ledger Group?</string>
+    <string name="groupDialog2Message">This will permanently delete Ledger Group. You won\'t be able to revert this!</string>
+    <string name="delSubGroupDialog2Title">Delete Ledger Sub Group?</string>
+    <string name="subgroupDialog2Message">This will permanently delete Ledger Sub Group. You won\'t be able to revert this!</string>
+
+    ///delete Ledger
+    <string name="delLedgerDialog2Title">Delete Ledger?</string>
+    <string name="ledgerDialog2Message">This will permanently delete Ledger. You won\'t be able to revert this!</string>
+
+
+    //delete cust dialog
+    <string name="delCustDialog1Title">Can\'t Delete Customer</string>
+    <string name="delCustDialog2Title">Delete Customer?</string>
+    <string name="custDialog1Message">This customer is associated in transactions carried out earlier hence it can not be deleted.</string>
+    <string name="custDialog2Message">This will permanently delete customer. You won\'t be able to revert this!</string>
+
+    //delete supp dialog
+    <string name="delSuppDialog1Title">Can\'t Delete Supplier</string>
+    <string name="delSuppDialog2Title">Delete Supplier?</string>
+    <string name="suppDialog1Message">This supplier is associated in transactions carried out earlier hence it can not be deleted.</string>
+    <string name="suppDialog2Message">This will permanently delete supplier. You won\'t be able to revert this!</string>
+
+    //delete item dialog
+    <string name="delItemDialog1Title">Can\'t Delete Item</string>
+    <string name="delItemDialog2Title">Delete Item?</string>
+    <string name="itemDialog1Message">This Item is associated in transactions carried out earlier hence it can not be deleted.</string>
+    <string name="itemDialog2Message">This will permanently delete item. You won\'t be able to revert this!</string>
+
+    //delete branch dialog
+    <string name="delBranchDialog1Title">Can\'t Delete Branch</string>
+    <string name="delBranchDialog2Title">Delete Branch?</string>
+    <string name="branchDialog1Message">This Branch is associated in transactions carried out earlier hence it can not be deleted.</string>
+    <string name="branchDialog2Message">This will permanently delete Branch. You won\'t be able to revert this!</string>
+
+    <string name="edit_purchase">Edit Purchase</string>
+    <string name="edit_payment">Edit Payment</string>
+    <string name="last_entry">Last entry:</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="pref_vendor_list">Selected Preferred Vendors</string>
+    <string name="pref_color_list">Selected Colors</string>
+    <string name="transaction_type">Transaction Type</string>
+    <string name="transaction_type_error">Please Select Atleast One Transaction Type</string>
+    <string name="select_transaction_type">Select Transaction Type</string>
+    <string name="org_address">Shop 1, M.G. Road, Gandhi Marg, Near Modi Bank, Ahmedabad 380001</string>
+    <string name="financial_year">April - March</string>
+    <string name="vendor_name">Vendor Name</string>
+    <string name="country">Country/Region</string>
+    <string name="signup_full_name">Please Enter Full Name</string>
+    <string name="signup_pwd">Please Enter Password</string>
+    <string name="recover_account_text">Don\'t worry, it happens to the best of us \n\nWe just need your registered email or mobile number to proceed</string>
+    <string name="recover_account_text_1">Don\'t worry, it happens to the best of us \n\nWe just need your registered mobile number to proceed</string>
+    <string name="recover_account_text_2">Don\'t worry, it happens to the best of us \n\nWe just need your registered email to proceed</string>
+    <string name="linksentemail">We have sent you an Email</string>
+    <string name="linksentsms">We have sent you a SMS</string>
+    <string name="checklinkemail">Check your email and follow instructions included in it.</string>
+    <string name="checklinksms">Check your sms and follow instructions included in it.</string>
+
+    <string name="updateversionmsg">New version of GoldBook is available. Please update to proceed.</string>
+    <string name="password_string">Password must contain 6 or more characters with combination of Uppercase, Lowercase, Numbers and Special characters</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="today_s_gold_rate">Today\'s Gold Rate:</string>
+    <string name="update">Update</string>
+
+    //Toast msgs throughout the application
+
+    <string name="valid_wastage">Please enter valid wastage</string>
+    <string name="add_grosswt_msg">Please add Gross Weight first</string>
+    <string name="lesswt_greaterthan_grosswt_msg">Less weight values total must not be equal or greater than gross weight</string>
+    <string name="lesswt_dialog_desc1_msg">Please enter Description-1</string>
+    <string name="lesswt_dialog_value1_msg">Please enter Less Weight Value-1</string>
+    <string name="lesswt_dialog_valid_value1_msg">Please enter valid Less Weight Value-1</string>
+    <string name="lesswt_dialog_desc2_msg">Please enter Description-2</string>
+    <string name="lesswt_dialog_value2_msg">Please enter Less Weight Value-2</string>
+    <string name="lesswt_dialog_valid_value2_msg">Please enter valid Less Weight Value-2</string>
+    <string name="lesswt_dialog_desc3_msg">Please Enter Description-3</string>
+    <string name="lesswt_dialog_value3_msg">Please enter Less Weight Value-3</string>
+    <string name="lesswt_dialog_valid_value3_msg">Please enter valid Less Weight Value-3</string>
+    <string name="lesswt_dialog_desc4_msg">Please Enter Description-4</string>
+    <string name="lesswt_dialog_value4_msg">Please Enter Less Weight Value-4</string>
+    <string name="lesswt_dialog_valid_value4_msg">Please enter valid Less Weight Value-4</string>
+    <string name="lesswt_dialog_desc5_msg">Please Enter Description-5</string>
+    <string name="lesswt_dialog_value5_msg">Please Enter Less Weight Value-5</string>
+    <string name="lesswt_dialog_valid_value5_msg">Please enter valid Less Weight Value-5</string>
+    <string name="valid_goldrate_msg">Please enter valid Gold rate</string>
+    <string name="amount_first_msg">Please enter Amount first</string>
+    <string name="finewt_first_msg">Please enter Fine weight first</string>
+    <string name="valid_finewt_msg">Please enter valid Fine weight</string>
+    <string name="valid_amount_msg">Please enter valid Amount</string>
+    <string name="cash_ledger_error_msg">Please Provide Cash Ledger</string>
+    <string name="bank_ledger_error_msg">Please Provide Bank Ledger</string>
+    <string name="adjustment_ledger_error_msg">Please Provide Round-Off Ledger</string>
+    <string name="enter_amount_msg">Please enter Amount</string>
+    <string name="enter_charge_title_msg">Please enter Charge title</string>
+    <string name="select_unit_msg">Please select Unit</string>
+    <string name="enter_business_name_msg">Please enter Business name</string>
+    <string name="select_country_msg">Please select Country</string>
+    <string name="select_state_territory_msg">Please select State / Union Territory</string>
+    <string name="select_city_msg">Please select City</string>
+    <string name="select_default_bal_msg">Please select Default Balance</string>
+    <string name="select_gst_registered_dealer_msg">Please select, are you GST Registered dealer?</string>
+    <string name="enter_gstin_msg">Please enter GSTIN</string>
+    <string name="enter_valid_gstin_msg">Please enter valid GSTIN</string>
+    <string name="select_another_bramch_to_switch_msg">Select another Branch to switch</string>
+    <string name="select_customer_first_msg">Please select Customer first</string>
+    <string name="select_contact_first_msg">Please select Contact first</string>
+    <string name="enter_address_details_msg">Please enter address details</string>
+    <string name="select_radio_gstbranch_yes_no_msg">Please select, is GST registered Branch?</string>
+    <string name="enter_first_name_msg">Please enter first name</string>
+    <string name="enter_last_name_msg">Please enter last name</string>
+    <string name="enter_branch_name_msg">Please enter Branch name</string>
+    <string name="enter_branch_code_msg">Please enter Branch code</string>
+    <string name="enter_mobile_no_msg">Please enter Mobile number</string>
+    <string name="enter_valid_mobileno_msg">Please enter valid Mobile number</string>
+    <string name="enter_valid_sales_wastage_msg">Please enter valid Sales wastage</string>
+    <string name="enter_valid_purchase_wastage_msg">Please enter valid Purchase wastage</string>
+    <string name="enter_category_name_msg">Please enter Category name</string>
+    <string name="enter_category_code_msg">Please enter Category code</string>
+    <string name="check_status_active_inactive_msg">Please check status Active or Inactive</string>
+    <string name="enter_term_balance_msg">Please enter Term balance</string>
+    <string name="select_radio_gst_reg_company_yesno_msg">Please select, is GST registered Company?</string>
+    <string name="select_radio_gst_reg_branch_yesno_msg">Please select, is GST registered Branch?</string>
+    <string name="enter_correct_pandetails_msg">Please enter correct PAN details</string>
+    <string name="click_back_again_to_exit">Please click BACK again to exit</string>
+    //company name already_selected
+    <string name="already_selected">\" already selected\"</string>
+    <string name="report_downloaded_successfully">Report downloaded successfully</string>
+    <string name="voucher_downloaded_successfully">Voucher downloaded successfully</string>
+    <string name="toolbar_title_settings">Settings</string>
+    <string name="password_condition_text_msg"><![CDATA[Use 6 or more characters with a mix of upper, lower, numbers & symbols]]></string>
+    <string name="enter_confirm_pwd_msg">Please enter confirm password</string>
+    <string name="pwd_confirmpwd_doesnt_match_msg"><![CDATA[Password & Confirm Password doesn\'t match]]></string>
+    <string name="agree_terms_priivacy">Please agree the Terms of Service and Privacy Policy.</string>
+    <string name="enter_new_mobile_to_update_msg">Enter new Mobile Number to update</string>
+    <string name="enter_new_email_to_update">Enter new Email to update</string>
+    <string name="enter_new_details_to_update_msg">Enter new details to update</string>
+    <string name="enter_either_mobno_or_email_msg">Please enter either Mobile Number or Email</string>
+    <string name="pwd_updated_successfully_msg">Password updated successfully</string>
+    <string name="active">Active</string>
+    <string name="inactive">Inactive</string>
+    <string name="enter_cash_rate_msg">Please enter Cash rate</string>
+    <string name="enter_bill_rate_msg">Please enter Bill rate</string>
+    <string name="enter_valid_cash_rate_msg">Please enter valid Cash rate</string>
+    <string name="enter_valid_billrate_msg">Please enter valid Bill rate</string>
+    <string name="todays_goldrate_updated">Today\'s Gold rate updated</string>
+    <string name="select_stock_to_pay">Please select Stock to pay</string>
+
+    //commonutils.showdialog msgs throughtout the application
+    <!-- <string name="enter_gross_wt_msg">Please enter Gross weight</string>-->
+    <string name="enter_less_wt_msg">Please enter Less weight</string>
+    <string name="enter_net_wt_msg">Please enter Net weight</string>
+    <!--<string name="enter_touch_msg">Please enter Touch</string>
+    <string name="enter_valid_touch_msg">Please enter valid Touch</string>
+    <string name="enter_wastage_msg">Please enter Wastage</string>-->
+    <string name="enter_finewt_msg">Please enter Fine weight</string>
+    <string name="enter_either_finewt_or_amt_msg">Please enter either Fine weight or amount</string>
+    <string name="select_item_name_msg">Please select Item name</string>
+    <string name="enter_units_msg">Please enter Units</string>
+    <string name="enter_grosswt_msg">Please enter Gross weight</string>
+    <string name="enter_lesswt_msg">Please enter Less weight</string>
+    <string name="enter_netwt_msg">Please enter Net weight</string>
+    <string name="error_netwt_msg">Net weight must be greater than 0</string>
+    <string name="enter_touch_msg">Please enter Touch</string>
+    <string name="enter_valid_touch_msg">Please enter valid Touch</string>
+    <string name="enter_wastage_msg">Please enter Wastage</string>
+    <string name="enter_finewt">Please enter Fine weight</string>
+    <string name="enter_making_charges">Please enter Making charges</string>
+    <string name="enter_unit">Please enter Unit</string>
+    <string name="select_state_msg">Please select State</string>
+    <string name="enter_office_building_apartment_msg">Please enter office, building, apartment</string>
+    <string name="enter_area_colony_street_sector_msg">Please enter area, colony, street, sector</string>
+    <string name="enter_landmark_msg">Please enter landmark</string>
+    <string name="enter_pincode_msg">Please enter PIN code</string>
+    <string name="enter_valid_pincode_msg">Please enter valid PIN code</string>
+    <string name="enter_todays_goldrate">Please enter today\'s Gold rate</string>
+    <string name="enter_ratecut_wt_msg">Please enter Rate-Cut weight</string>
+    <string name="ratecut_wt_cant_null">Rate-Cut weight can\'t be null</string>
+    <string name="ratecut_wt_valid_msg">Please enter valid Rate-Cut weight</string>
+    <string name="enter_goldrate_msg">Please enter Gold rate</string>
+    <string name="enter_valid_goldrate_msg">Please enter valid Gold rate</string>
+    <string name="select_customer_name">Please select Customer name</string>
+    <string name="enter_invoice_msg">Please enter Invoice</string>
+    <string name="select_date_msg">Please select Date</string>
+    <string name="add_an_item_msg">Please add an Item</string>
+    <string name="total_due_msg">Total due cannot be 0</string>
+    <string name="enter_place_of_supply_msg">Please enter Place of Supply</string>
+    <string name="enter_tcs_amount_msg">Please enter TCS amount</string>
+    <string name="enter_valid_tcs_amount_msg">Please enter valid TCS amount</string>
+    <string name="select_contact_billdate_msg">Please select Contact bill date</string>
+    <string name="select_business_or_individual_msg">Please select business or individual</string>
+    <string name="enter_company_name_msg">Please enter Company name</string>
+    <string name="enter_customer_code_msg">Please enter Customer code</string>
+    <string name="enter_weight_msg">Please enter weight</string>
+    <string name="enter_piece_msg">Please enter piece</string>
+    <string name="enter_lessweight_msg">Please enter less weight</string>
+    <string name="enter_finalweight_msg">Please enter Final weight</string>
+    <string name="enter_itemrate_msg">Please enter Item rate</string>
+    <string name="enter_labourrate_msg">Please enter Labour rate</string>
+    <!--<string name="enter_mobilno_msg">Please enter Mobile number</string>-->
+    <!--<string name="enter_valid_mobileno_msg">Please enter valid Mobile number</string>-->
+    <string name="select_tax_exempt_or_taxable_msg">Please select Tax Exempt or Taxable</string>
+    <string name="select_discount_ledger">Please select Discount Ledger.</string>
+    <string name="select_qty_measure_msg">Please select Quantity measure</string>
+    <string name="enter_item_code_msg">Please enter Item code</string>
+    <string name="enter_item_name_msg">Please enter Item name</string>
+    <string name="select_cateogory_msg">Please select Category</string>
+    <string name="set_opening_stock">Please set Opening Stock</string>
+    <string name="enter_organization_name_msg">Please enter Organization name</string>
+    <string name="enter_email_msg">Please enter Email</string>
+    <string name="select_reference_number_msg">Please select Reference number</string>
+    <string name="add_payment_line_msg">Please add Payment line</string>
+    <string name="add_receipt_line_msg">Please add Receipt line</string>
+    <string name="select_business_or_invidual_karigar_msg">Please select business or individual / karigar</string>
+    <string name="enter_supplier_code_msg">Please enter Supplier code</string>
+    <string name="enter_display_name_msg">Please enter Display name</string>
+    <string name="enter_pan_details">Please enter PAN details</string>
+    <string name="enter_valid_pan_details">Please enter valid PAN details</string>
+    <string name="enter_address_details">Please enter Address details</string>
+    <string name="enter_quantity_msg">Please enter Quantity</string>
+    <string name="enter_gross_wt_msg">Please enter Gross weight</string>
+    <string name="enter_valid_grosswt_msg">Please enter valid Gross weight</string>
+    <string name="enter_valid_lesswt_msg">Please enter valid Less weight</string>
+    <string name="enter_grosswt_greater_than_lesswt_msg">Please enter Gross weight value greater than Less weight</string>
+    <string name="select_item_category_msg">Please select Item category</string>
+    <string name="select_item_msg">Please select Item</string>
+    <string name="select_cash_ledger_msg">Please select Cash ledger</string>
+    <string name="select_bank_ledger_msg">Please select Bank ledger</string>
+    <string name="select_stock_msg">Please select Stock</string>
+    <string name="access_denied">Access Denied</string>
+    <string name="access_denied_errormsg">Please upgrade plan to proceed.</string>
+    <string name="restrict_msg">You\'ve reached maximum transaction limit in free trial. Please upgrade plan to proceed.</string>
+    <string name="desc1">This app is an extension of Goldbook, an online account software for jewellery industry by Ternate Softwares. Goldbook makes it easier for everyone, from small-scale karigar to big manufacturing facilities.</string>
+    <string name="desc2">Reach out to us for assistance, feedback or any feature ideas.</string>
+    <string name="about">About</string>
+    <string name="current_plan">Current plan:</string>
+    <string name="subscription">Subscription</string>
+    <string name="to_upgrade_your_subscription">To upgrade your subscription:</string>
+    <string name="subs_first_line">1. Go to www.goldbook.in</string>
+    <string name="subs_second_line">2. Choose a plan right for you</string>
+    <string name="subs_third_line">3. Sign-In or proceed as Guest</string>
+    <string name="subs_fourth_line"><![CDATA[4. Fill-in the billing information & make payment]]></string>
+    <string name="subs_fifth_line">If you need any assistance, contact us at support@goldbook.in</string>
+    <string name="subs_extra_line">Read more about the available plans</string>
+    <string name="onboarding_title1">Smart Accounting App</string>
+    <string name="onboarding_title2">Create and send GST compliant invoices</string>
+    <string name="onboarding_title3">Get all your Transactions in one touch</string>
+    <string name="onboarding_title4">Manage Rate-Cut</string>
+    <string name="onboarding_desc1">Track business performance on your dashboard</string>
+    <string name="onboarding_desc2">Send professional looking error-free invoices to your customers</string>
+    <string name="onboarding_desc3">All you need to run your business is easily accessible on the menu</string>
+    <string name="onboarding_desc4">Whether cash or fine, manage rate-cut of any kind easily</string>
+    <string name="golbook">GoldBook</string>
+    <string name="pdf_notinstalled_msg">Please install a document viewer to view the downloaded report file</string>
+    <string name="supp">Supplier</string>
+
+    //lock screen keys
+
+    <string name="activity_not_locked_text">Nothing should happen on this page, here for test purpose</string>
+
+    <string name="activity_dialog_title">Forgot you Pincode?</string>
+
+    <string name="activity_dialog_accept">OK</string>
+
+    <string name="activity_dialog_decline">CANCEL</string>
+
+    <string name="activity_dialog_content">Tap \'OK\' to log out, when you log back in you\'ll be able to create a new Pincode.\n\nIf you remember your Pincode, tap \'Cancel\' to go back.</string>
+
+    <string name="activity_appcompat_message">I am a PinCompatActivity!</string>
+
+
+    <string name="button1_large_text" translatable="false">1</string>
+
+    <string name="button2_large_text" translatable="false">2</string>
+
+    <string name="button2_small_text" translatable="false">ABC</string>
+
+    <string name="button3_large_text" translatable="false">3</string>
+
+    <string name="button3_small_text" translatable="false">DEF</string>
+
+    <string name="button4_large_text" translatable="false">4</string>
+
+    <string name="button4_small_text" translatable="false">GHI</string>
+
+    <string name="button5_large_text" translatable="false">5</string>
+
+    <string name="button5_small_text" translatable="false">JKL</string>
+
+    <string name="button6_large_text" translatable="false">6</string>
+
+    <string name="button6_small_text" translatable="false">MNO</string>
+
+    <string name="button7_large_text" translatable="false">7</string>
+
+    <string name="button7_small_text" translatable="false">PQRS</string>
+
+    <string name="button8_large_text" translatable="false">8</string>
+
+    <string name="button8_small_text" translatable="false">TUV</string>
+
+    <string name="button9_large_text" translatable="false">9</string>
+
+    <string name="button9_small_text" translatable="false">WXYZ</string>
+
+    <string name="button11_large_text" translatable="false">0</string>
+
+    <string name="pin_code_forgot_text">Forgot PIN ?</string>
+
+    <string name="pin_code_step_disable">Disable %d-digit PIN</string>
+
+    <string name="pin_code_step_create">Create a %d-digit PIN</string>
+
+    <string name="pin_code_step_change">Enter your current %d-digit PIN</string>
+
+    <string name="pin_code_step_unlock">Enter your %d-digit PIN</string>
+
+    <string name="pin_code_step_enable_confirm">Confirm your %d-digit PIN</string>
+
+    <string name="pin_code_fingerprint_text">Fingerprint</string>
+
+    <string name="pin_code_fingerprint_success">Fingerprint recognized</string>
+
+    <string name="pin_code_fingerprint_not_recognized">Fingerprint not recognized. Try again.</string>
+    <string name="newversiontwocommingsoon">GoldBook 2.0 is Coming Soon!</string>
+    <string name="signuprestrictmsg">Sign-Up will resume shortly on website. For more information, visit</string>
+    <string name="backtosignin">Back to Sign In</string>
+
+
+    // added by amoli
+    <string name="preferences">Preferences</string>
+    <string name="contacts">Contacts</string>
+    <string name="taxes">Taxes</string>
+    <string name="tcs">TCS</string>
+    <string name="tds">TDS</string>
+    <string name="gst">GST</string>
+    <string name="tcs_nature">TCS Nature of Goods</string>
+    <string name="tds_nature">TDS Nature of Payments</string>
+    <string name="item_inventory">Item / Inventory</string>
+    <string name="inventory_category">Add Inventory Category</string>
+    <string name="metal_colour">Add Metal Color</string>
+
+
+    //nop nog validation
+    <string name="nognopname">Please enter Name</string>
+    <string name="nognopsection">Please enter Section</string>
+    <string name="nognoppaymentcode">Please enter Payment Code</string>
+    <string name="nognopratewithpan">Please enter Rate with Pan</string>
+    <string name="nognopratewithoutpan">Please enter Rate without Pan</string>
+    <string name="nognopratewithotherpan">Please enter Rate for Other with Pan</string>
+    <string name="nognopratewithoutotherpan">Please enter Rate for Other without Pan</string>
+    <string name="setting_preference_enablechequetext">Enable cheque register for \nBank a/c?</string>
+    <string name="enter_valid_tanno_msg">Please enter valid TAN No.</string>
+
+
+
+    <string name="ledgerName">Ledger Name</string>
+    <string name="groupName">Group Name</string>
+    <string name="parentgroupName">Parent Group Name</string>
+    <string name="ledgerfragfullname">com.goldbookapp.ui.fragment.LedgerFragment</string>
+    <string name="groupsfragfullname">com.goldbookapp.ui.fragment.GroupsFragment</string>
+
+    <string name="ledger">All Ledgers</string>
+    <string name="group">All Groups</string>
+    <string name="contact_detail">Contact Detail</string>
+    <string name="metal_colours">Metal Colors</string>
+
+    <string name="new_ledger">New Ledger</string>
+    <string name="cheque_register">Cheque Register</string>
+    <string name="cheque_book">New Cheque Book</string>
+    <string name="edit_cheque_book">Edit Cheque Book</string>
+    <string name="new_group">New Group</string>
+    <string name="less_weight">Add Less Weight</string>
+    <string name="edit_less_weight">Edit Less Weight</string>
+
+    <string name="group_name_msg">Please enter Group Name</string>
+    <string name="group_remarks_msg">Please enter Remarks</string>
+    <string name="sub_group_name_msg">Please select sub group</string>
+    <string name="chequebook_name_msg">Please enter Cheque Book Name</string>
+    <string name="chequebook_from_msg">Please enter Cheque Book Number</string>
+    <string name="chequebook_TO_msg">Please enter Cheque Book Number</string>
+    <string name="uniquecode_ledger_msg">Please enter Unique Code</string>
+    <string name="name_ledger_msg">Please enter Name</string>
+    <string name="group_ledger_msg">Please select Group</string>
+    <string name="bank_ledger_msg">Please enter Bank Name</string>
+    <string name="account_ledger_msg">Please enter Account No</string>
+    <string name="ifsc_ledger_msg">Please enter IFSC Code</string>
+    <string name="branch_ledger_msg">Please enter Branch Name</string>
+    <string name="duty_ledger_msg">Please select Duty</string>
+    <string name="gst_ledger_msg">Please select GST</string>
+    <string name="dutyPercentage_ledger_msg">Please enter Duty</string>
+    <string name="tcs_ledger_msg">Please select TCS</string>
+    <string name="tds_ledger_msg">Please select TDS</string>
+    <string name="pancard_ledger_msg">Please enter Pan Card</string>
+    <string name="gsttreatment_ledger_msg">Please enter GST Treatment</string>
+    <string name="gstin_ledger_msg">Please enter GSTIN</string>
+    <string name="openingBal_ledger_msg">Please enter Opening Balance</string>
+    <string name="openingBalType_ledger_msg">Please select Opening Balance Type</string>
+    <string name="lasttransDate">Last Trans. Dt. </string>
+    <string name="tag_prefix_msg">Please enter Tag Prefix</string>
+
+    <string name="edit_metalcolour">Edit Metal Color</string>
+    <string name="enter_metal_name_msg">Please enter Metal name</string>
+    <string name="enter_metal_code_msg">Please enter Metal code</string>
+    <string name="ledgerReport">Ledger Book</string>
+    <string name="tagStockReport">Tagged Stock Summary</string>
+    <string name="stockreport">Stock Item Details</string>
+    <string name="select_all_ledger_msg">Please select ledger</string>
+    <string name="nature_group_name_msg">Please select nature group</string>
+    <string name="parent_group_name_msg">Please select parent group</string>
+
+
+    <string name="addtional_information">Additional Information</string>
+    <string name="tds_tcs_detail">TDS / TCS Details</string>
+    <string name="tds_deductor_error_msg">Please select Deductor Type</string>
+    <string name="tds_nop_error_msg">Please select Nature Of Payment</string>
+    <string name="tcs_collector_error_msg">Please select Collector Type</string>
+    <string name="tcs_nog_error_msg">Please select Nature Of Goods</string>
+    <string name="modify_tcs_tds_details">Please click Modify TDS / TCS details</string>
+
+
+    //delete nog/nop
+    <string name="delnogDialogTitle">Delete Nature of Goods?</string>
+    <string name="delnopDialogTitle">Delete Nature of Payments?</string>
+    <string name="nogDialogMessage">Are you sure you want to delete</string>
+
+
+    //User Restriction
+    //For Customer Module
+    <string name="sales">Sales|</string>
+    <string name="pur">Purchase|</string>
+    <string name="ledger_Group">Ledger-Group</string>
+    <string name="grp">Group</string>
+
+
+    <string name="cust_list">Customers|list</string>
+    <string name="cust_details">Customers|details</string>
+    <string name="cust_add_edit">Customers|add_edit</string>
+    <string name="cust_delete">Customers|delete</string>
+    <string name="supp_list">Supplier|list</string>
+    <string name="supp_details">Supplier|details</string>
+    <string name="supp_add_edit">Supplier|add_edit</string>
+    <string name="supp_delete">Supplier|delete</string>
+    <string name="items_list">Items|list</string>
+    <string name="item_details">Items|details</string>
+    <string name="item_add_edit">Items|add_edit</string>
+    <string name="item_delete">Items|delete</string>
+    <string name="sales_list">Sales|list</string>
+    <string name="sales_details">Sales|details</string>
+    <string name="sales_add_edit">Sales|add_edit</string>
+    <string name="sales_delete">Sales|delete</string>
+    <string name="purchase_list">Purchase|list</string>
+    <string name="purchase_details">Purchase|details</string>
+    <string name="purchase_add_edit">Purchase|add_edit</string>
+    <string name="purchase_delete">Purchase|delete</string>
+    <string name="receipt_list">Receipt|list</string>
+    <string name="receipt_details">Receipt|details</string>
+    <string name="receipt_add_edit">Receipt|add_edit</string>
+    <string name="receipt_delete">Receipt|delete</string>
+    <string name="payment_list">Payment|list</string>
+    <string name="payment_details">Payment|details</string>
+    <string name="payment_add_edit">Payment|add_edit</string>
+    <string name="payment_delete">Payment|delete</string>
+    <string name="ledger_list">Ledger|list</string>
+    <string name="ledger_details">Ledger|details</string>
+    <string name="ledger_add_edit">Ledger|add_edit</string>
+    <!-- <string name="ledger_delete">Ledger|delete</string>-->
+    <string name="ledger_delete">delete</string>
+    <string name="ledger_group_list">Ledger-Group|list</string>
+    <string name="ledger_group_details">group_details</string>
+    <string name="ledger_group_add_edit">add_edit</string>
+    <string name="ledger_group_delete">group_delete</string>
+    <string name="ledger_group_delet">Ledger-Group|group_delete</string>
+    <string name="ledger_subgroup_details">sub_group_details</string>
+    <string name="ledger_subgroup_delete">sub_group_delete</string>
+
+    <string name="permission_opening_bal">opening_cash_balance</string>
+    <string name="permission_fine_bal">opening_fine_balance</string>
+    <string name="permission_cash_limit">cash_limit</string>
+    <string name="permission_fine_limit">fine_limit</string>
+    <string name="permission_pan_card">pan_card</string>
+    <string name="permission_tax_preference">tax_preference</string>
+    <string name="permission_specific_rate">specific_rate</string>
+    <string name="permission_hsn_code">hsn_code</string>
+    <string name="permission_vendor_id">vendor_id</string>
+    <string name="permission_stock_level">stock_level</string>
+    <string name="permission_sale_rate">sale_rate</string>
+    <string name="permission_purchase_rate">purchase_rate</string>
+    <string name="permission_item_stock_type">item_stock_type</string>
+    <string name="permission_show_in_sales">show_in_sales</string>
+    <string name="permission_show_in_purchase">show_in_purchase</string>
+    <string name="permission_is_raw_material">is_raw_material</string>
+    <string name="permission_opening_stock">opening_stock</string>
+
+
+    //User Restriction
+    //For Customer Module
+
+    // report (ledger_statement means contact report)
+    <string name="ledgr">Ledger|</string>
+    <string name="ledger_statement">Ledger-Statement</string>
+    <string name="stock_statement">Stock-Statement</string>
+    <string name="sales_">Sales-</string>
+    <string name="purchase_">Purchase-</string>
+    <string name="day_book_">Day-Book-</string>
+    <string name="cash_book_">Cash-Book-</string>
+    <string name="ledger_">Ledger-</string>
+    <string name="report_view">view</string>
+    <string name="report_print_download">print_download</string>
+
+
+    // setting module (for user persmission)
+    <string name="setting">Setting</string>
+    <string name="setting_preference">Setting-General</string>
+    <string name="setting_taxes">Setting-Taxes</string>
+    <string name="setting_contacts">Setting-Contacts</string>
+    <string name="setting_items">Setting-Items</string>
+
+    <string name="org">Organization</string>
+    <string name="org_list">Organization|list</string>
+
+    <string name="branch">Branch</string>
+    <string name="branch_list">Branch|list</string>
+
+    <string name="add">add</string>
+    <string name="edit">edit</string>
+    <string name="view">view</string>
+    <string name="sav">save</string>
+    <string name="list">list</string>
+    <string name="details">details</string>
+    <string name="print">print</string>
+    <string name="download">download</string>
+    <string name="del">delete</string>
+
+    // item inventory subactivity of settings module
+    <string name="item_category">Item-Category</string>
+    <string name="metal_color">Metal-Colour</string>
+    <string name="add_edit">add_edit</string>
+    <string name="change_status">"change_status"</string>
+
+
+    // user restriction -> change goldrate dashboard user restriction
+    <string name="change_gold_rate">Change-Gold-Rate</string>
+
+    // user restriction -> profile module
+    <string name="profile">Profile</string>
+    <string name="profile_contact">Profile-Contact</string>
+    <string name="account_information">Account-Information</string>
+    <string name="account_security">Account-Security</string>
+    <string name="edit_view">edit_view</string>
+
+
+    <string name="reprt">-Report</string>
+    <string name="ledgr_report">Ledger-Report</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="lesswt_st_weight_error_msg">Please enter valid Weight</string>
+
+    <string name="editDeleteIssueResDialogTitle">Issue/Receive</string>
+    <string name="editDeleteIssueResDialogMessage">Do you want to edit or delete Issue/Receive?</string>
+    <string name="editDeleteIssueRecDialogPosbtn">Edit Issue/Receive</string>
+    <string name="editDeleteIssueRecDialogNeutralbtn">Delete Issue/Receive</string>
+
+
+    <string name="add_cash_receipt">Add Cash Receipt</string>
+    <string name="add_cash_payment">Add Cash Payment</string>
+    <string name="add_bank_receipt">Add Bank Receipt</string>
+    <string name="add_bank_payment">Add Bank Payment</string>
+    <string name="add_metal_receipt">Add Metal Receipt</string>
+    <string name="add_metal_payment">Add Metal Payment</string>
+
+</resources>

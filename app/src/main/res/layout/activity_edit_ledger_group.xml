@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_layout" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llNewLedgerActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvUniqueCodeEditLedger"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Group Name">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtNameEditGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:maxLength="30"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tVEditGroupName"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Nature"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtEditGroupName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:clickable="true"
+                                    android:focusable="false"
+                                    android:cursorVisible="false"
+                                    android:focusableInTouchMode="false"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapSentences|textNoSuggestions"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lyEditGp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_20sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:text="Affect Gross Profit?"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroupGpEditGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/radioGpEditGroupY"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/colorPrimary"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="Yes"
+                                        android:textColor="@color/drop_down_arrow_color"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <RadioButton
+                                        android:id="@+id/radioGpEditGroupN"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:checked="true"
+                                        android:buttonTint="@color/colorPrimary"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="No"
+                                        android:textColor="@color/drop_down_arrow_color"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                </RadioGroup>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Remarks">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtRemarksEditGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:maxLength="30"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:singleLine="true" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSave_EditGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:text="Save"
+            android:onClick="onClick"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp"
+            app:fabRippleColor="@color/gray_text"
+            app:fabElevation="5dp"
+            app:fabIconPosition="start"
+            app:fabSizes="normal"
+            app:fabType="circle" />
+    </RelativeLayout>
+</layout>

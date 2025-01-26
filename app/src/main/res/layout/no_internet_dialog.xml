@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:layout_height="wrap_content"
+
+    android:layout_gravity="center">
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="@string/app_name"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:textColor="@color/header_black_text"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:textSize="@dimen/_14sdp"
+        tools:ignore="RtlCompat" />
+    <!--<com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/gray_bg"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:text="@string/app_name"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="@color/header_black_text"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:textSize="@dimen/_14sdp"
+                tools:ignore="RtlCompat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/please_check_internet_msg"
+                        android:gravity="start"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textColor="@color/header_black_text"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_14sdp"/>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            &lt;!&ndash;            <com.google.android.material.card.MaterialCardView&ndash;&gt;
+            &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;
+            &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;
+            &lt;!&ndash;                app:cardCornerRadius="@dimen/_5sdp"&ndash;&gt;
+            &lt;!&ndash;                app:cardBackgroundColor="@color/gray_bg"&ndash;&gt;
+
+            &lt;!&ndash;                android:layout_gravity="center_vertical">&ndash;&gt;
+
+
+            &lt;!&ndash;            </com.google.android.material.card.MaterialCardView>&ndash;&gt;
+
+
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>-->
+
+
+</LinearLayout>

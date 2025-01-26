@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="profileViewModel"
+            type="com.goldbookapp.ui.activity.viewmodel.ProfileViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/gray_bg"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_7sdp"
+                        android:weightSum="1"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical"
+                                android:layout_height="match_parent">
+
+
+
+
+                                <TextView
+                                    android:id="@+id/categoryName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Category Name "
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <TextView
+                                    android:id="@+id/categoryCode"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Code"
+                                    android:textColor="@android:color/darker_gray"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_14sdp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Status "
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical"
+                                android:gravity="end"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvcatNameItemCatDetail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textEnd"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:textColor="@android:color/black"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_14sdp"/>
+
+                                <TextView
+                                    android:id="@+id/tvcatCodeItemCatDetail"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textEnd"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:textColor="@android:color/black"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_14sdp"/>
+                                <TextView
+                                    android:id="@+id/tvcatStatusItemCatDetail"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textEnd"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:textColor="@android:color/black"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_14sdp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="profileViewModel"
+            type="com.goldbookapp.ui.activity.viewmodel.ProfileViewModel" />
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout"/>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsDashBoard"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/lldash"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tvDashBranchName"
+                        android:visibility="gone"
+                        android:enabled="false"
+                        android:paddingBottom="@dimen/_10sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                        app:endIconTint="@color/drop_down_arrow_color"
+                        android:hint="@string/branch_name">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/txtDashBranchName"
+                            android:backgroundTint="@color/gray_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:cursorVisible="false"
+                            android:focusableInTouchMode="false"
+                            android:editable="false"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_FiscalYear"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:padding="@dimen/_7sdp"
+                        android:background="@drawable/todays_goldrate_bg"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tvLeftDash_FiscalYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/today_s_gold_rate"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <!-- <TextView
+                             android:textStyle="bold"
+                             android:text="45000"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginStart="@dimen/_2sdp"
+                             android:layout_marginEnd="@dimen/_10sdp"
+                             android:textColor="@android:color/black"
+                             android:fontFamily="@font/proxima_nova_regular"
+                             android:textSize="@dimen/_12sdp"/>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_TodayRate"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:padding="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/todays_goldrate_bg"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvLeftDash_TodaysRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/today_s_gold_rate"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <!-- <TextView
+                             android:textStyle="bold"
+                             android:text="45000"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginStart="@dimen/_2sdp"
+                             android:layout_marginEnd="@dimen/_10sdp"
+                             android:textColor="@android:color/black"
+                             android:fontFamily="@font/proxima_nova_regular"
+                             android:textSize="@dimen/_12sdp"/>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:weightSum="1">
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/dashcardCust"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/dash_customer_bg"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            android:layout_gravity="center_vertical">
+                            <LinearLayout
+                                android:gravity="start"
+                                android:orientation="vertical"
+                                android:background="@drawable/todays_goldrate_bg"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Customer's Balance"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@android:color/black"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+                                <TextView
+                                    android:id="@+id/dashToCollectVal1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.000  (fine)"
+                                    android:textAlignment="textStart"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:textColor="@color/header_black_text"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_12sdp"/>
+                                <TextView
+                                    android:id="@+id/dashToCollectVal2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.000  (cash)"
+                                    android:textAlignment="textStart"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:textColor="@color/header_black_text"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_12sdp"/>
+                                <TextView
+                                    android:id="@+id/dashToCollectVal3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.00  (cash)"
+                                    android:textAlignment="textStart"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:textColor="@color/header_black_text"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_12sdp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/dashcardSupp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/dash_supplier_bg"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            android:layout_gravity="center_vertical">
+                            <LinearLayout
+                                android:gravity="start"
+                                android:orientation="vertical"
+                                android:background="@drawable/todays_goldrate_bg"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Supplier's Balance"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@android:color/black"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+                                <TextView
+                                    android:id="@+id/dashToPayVal1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.000  (fine)"
+                                    android:textAlignment="textStart"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:textColor="@color/header_black_text"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_12sdp"/>
+                                <TextView
+                                    android:id="@+id/dashToPayVal2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.000  (fine)"
+                                    android:textAlignment="textStart"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:textColor="@color/header_black_text"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_12sdp"/>
+                                <TextView
+                                    android:id="@+id/dashToPayVal3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.00  (cash)"
+                                    android:textAlignment="textStart"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:textColor="@color/header_black_text"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_12sdp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:weightSum="1">
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/dashcardItem"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/lighter_grey"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            android:layout_gravity="center_vertical">
+                            <LinearLayout
+                                android:gravity="start"
+                                android:orientation="vertical"
+                                android:background="@drawable/todays_goldrate_bg"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Stock"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@android:color/black"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                                <TextView
+                                    android:id="@+id/dashStockVal1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:text="0 items"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+                                <TextView
+                                    android:id="@+id/dashStockVal2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.000 gm (F)"
+                                    android:textAlignment="textStart"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:textColor="@android:color/black"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_12sdp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/dashcardSales"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/lighter_grey"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            android:layout_gravity="center_vertical">
+                            <LinearLayout
+                                android:gravity="start"
+                                android:orientation="vertical"
+                                android:background="@drawable/todays_goldrate_bg"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Monthly Sales"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@android:color/black"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+                                <TextView
+                                    android:id="@+id/dashSalesVal1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.000 gm"
+                                    android:textAlignment="textStart"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:textColor="@android:color/black"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_12sdp"/>
+                                <TextView
+                                    android:id="@+id/dashSalesVal2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="₹ 0.00"
+                                    android:textAlignment="textStart"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:textColor="@android:color/black"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_12sdp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_below="@id/lldash"
+                    android:id="@+id/dashrecenttrans"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColorHint="@android:color/black"
+                    android:hint="Recent Transactions">
+
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:inputType="textCapWords|textNoSuggestions"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="0dp"
+                        android:textColor="@android:color/black"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:clickable="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_below="@id/dashrecenttrans"
+                    android:id="@+id/dash_rv_RecentTransactions"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/row_sales"
+                    android:nestedScrollingEnabled="false"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_below="@id/dashrecenttrans"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvNoRecorddashRecentTrans"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:gravity="center"
+                        android:text="@string/no_record_found"
+                        android:textSize="@dimen/_16sdp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.leinardi.android.speeddial.SpeedDialOverlayLayout
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.leinardi.android.speeddial.SpeedDialView
+            android:id="@+id/speedDial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:sdMainFabClosedBackgroundColor="@color/colorPrimary"
+            app:sdMainFabClosedIconColor="@android:color/white"
+            app:sdMainFabClosedSrc="@drawable/ic_add_white_24dp"
+            app:sdMainFabOpenedBackgroundColor="@color/colorPrimary"
+            app:sdMainFabOpenedIconColor="@android:color/white"
+            android:visibility="gone"
+            app:sdOverlayLayout="@id/overlay" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</layout>

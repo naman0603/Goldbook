@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+    <LinearLayout
+        android:id="@+id/llTransRoot"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:text="@string/select_transaction_type"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textSize="@dimen/_14sdp"/>
+
+        <LinearLayout
+            android:id="@+id/llrowTransType1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/rowTransName1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:singleLine="false"
+                android:text="Show In Sales"
+                />
+
+            <CheckBox
+                android:id="@+id/rowchbTrans1"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llrowTransType2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/rowTransName2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:singleLine="false"
+                android:text="Show In Purchase"
+                />
+
+            <CheckBox
+                android:id="@+id/rowchbTrans2"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llrowTransType3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/rowTransName3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:singleLine="false"
+                android:text="Is Raw Material"
+                />
+
+            <CheckBox
+                android:id="@+id/rowchbTrans3"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

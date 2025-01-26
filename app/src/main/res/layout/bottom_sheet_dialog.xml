@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bottomsheet_bg">
+
+
+        <RadioGroup
+            android:id="@+id/rgAddSaleLine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbCashRecAddSaleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Cash Receipt"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioButton
+                android:id="@+id/rbCashPayAddSaleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Cash Payment"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioButton
+                android:id="@+id/rbBankRecAddSaleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Bank Receipt"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioButton
+                android:id="@+id/rbBankPayAddSaleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Bank Payment"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioButton
+                android:id="@+id/rbMetalRecAddSaleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Metal Receipt"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <RadioButton
+                android:id="@+id/rbMetalPayAddSaleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Metal Payment"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioButton
+                android:id="@+id/rbAdjustAddSaleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Adjustment"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioButton
+                android:id="@+id/rbRateCutAddSaleLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Rate-Cut"
+                android:textSize="@dimen/_14sdp" />
+        </RadioGroup>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAddItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:cardBackgroundColor="@color/gray_bg"
+            app:cardCornerRadius="@dimen/_50sdp"
+            android:visibility="gone"
+            app:cardElevation="0dp">
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnNextAddSaleLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="nextClicked"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:gravity="center"
+                android:text="@string/next"
+                android:visibility="visible"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </LinearLayout>
+
+</layout>

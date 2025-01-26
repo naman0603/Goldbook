@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include layout="@layout/toolbar_layout"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llOpeningStockDetail_root"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:clickable="true">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="1"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="0.5">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Date: "
+                                        android:textColor="@android:color/black"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:layout_marginBottom="@dimen/_2sdp"
+                                        android:textSize="@dimen/_12sdp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_purchasebilldetail_transactiondate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:singleLine="true"
+                                        android:ellipsize="end"
+                                        android:textColor="@android:color/black"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:textSize="@dimen/_12sdp"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="0.5">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Status: "
+                                        android:visibility="gone"
+                                        android:textColor="@android:color/black"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:layout_marginBottom="@dimen/_2sdp"
+                                        android:textSize="@dimen/_12sdp"/>
+                                    <TextView
+                                        android:id="@+id/tv_purchasebilldetail_right_verification"
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:textColor="#4fb786"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:textSize="@dimen/_12sdp"/>
+                                    <TextView
+                                        android:id="@+id/tv_purchasebilldetail_right_dateWithTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:singleLine="true"
+                                        android:ellipsize="end"
+                                        android:textColor="@color/gray_text"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:textSize="@dimen/_12sdp"/>
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@android:color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="Item"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="end"
+                            android:text="Qty/Fine Wt."
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@android:color/black"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_openingStockdetail_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:gravity="end"
+                            android:text="Metal Weights:"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.35">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gross Wt:"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Less Wt:"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Net Wt:"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fine Wt:"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:background="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total Charges:"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.35">
+                            <TextView
+                                android:id="@+id/tv_openingStockdetail_right_gross_wt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+                            <TextView
+                                android:id="@+id/tv_openingStockdetail_right_less_wt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+                            <TextView
+                                android:id="@+id/tv_openingStockdetail_net_wt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:id="@+id/tv_openingStockdetail_right_fine_wt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:background="@android:color/black"/>
+
+                            <TextView
+                                android:id="@+id/tv_openingStockdetail_right_total_charges"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@android:color/black"/>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_closingbal_DetailopeningStock"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:gravity="start"
+                            android:text="Closing Bal :"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.28">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fine Wt :"
+                                android:gravity="start"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Cash :"
+                                android:gravity="start"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.39">
+                            <TextView
+                                android:id="@+id/tvCloBalFineWtDetailopeningStock"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0.00 gm"
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+                            <TextView
+                                android:id="@+id/tvCloBalCashDetailopeningStock"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="$ 1,00,000"
+                                android:gravity="end"
+                                android:textColor="@color/red"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Notes:"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:id="@+id/tv_openingStockdetail_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:id="@+id/tv_attachment_label_openingStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Attachment:"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/iv_openingStockdetail_attachmentone"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:id="@+id/iv_openingStockdetail_attachmenttwo"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:visibility="gone"/>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+            <ProgressBar
+                android:id="@+id/progressBar_openingStockdetail"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="?android:attr/progressBarStyle"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

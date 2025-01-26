@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/spr_tv_contactname"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="$contactName"
+            android:paddingTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:textSize="@dimen/_12sdp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/spr_rv_transactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/spr_tv_column1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="INV-1022, Earrings"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_12sdp"/>
+
+
+            <TextView
+                android:id="@+id/spr_tv_column2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="01 Mar 2021"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_12sdp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:paddingTop="@dimen/_2sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/spr_tv_row2_column1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="N.W.: 9999.999"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_12sdp"/>
+
+            <TextView
+                android:id="@+id/spr_tv_row2_column2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="N.W.: 9999.999"
+                android:singleLine="true"
+                android:ellipsize="end"
+               android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_12sdp"/>
+            <TextView
+                android:id="@+id/spr_tv_row2_column3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="₹99,99,999.00"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_12sdp"/>
+
+
+        </LinearLayout>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@android:color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/spr_tv_subtotal_label"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_5sdp"
+                android:textColor="@android:color/black"
+                android:text="Sub-Total:"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:textSize="@dimen/_12sdp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/row_cbr_trans_firstcolumn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N.W.: 9999.999"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <TextView
+                    android:id="@+id/row_cbr_trans_secondcolumn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="F.W.: 9999.999"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                  android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:textSize="@dimen/_12sdp"/>
+                <TextView
+                    android:id="@+id/row_cbr_trans_thirdcolumn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="₹99,99,999.00"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAlignment="textEnd"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:textSize="@dimen/_12sdp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</layout>

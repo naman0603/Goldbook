@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+    <include layout="@layout/toolbar_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPnSAppLock"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/gray_bg"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvPnSTwoFactorAuth"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Two-factor authentication"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_15sdp"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPnSDescription"
+                    android:visibility="gone"
+                    android:paddingRight="@dimen/_50sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two_factor_description"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_10sdp"/>
+
+
+
+                <LinearLayout
+                    android:id="@+id/llPnSAppLock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.95">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="App Lock"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_14sdp"/>
+
+                        <TextView
+                            android:id="@+id/tvDatePayDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Prevent app access while logged-in"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_10sdp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/_12sdp"
+                        android:background="@drawable/ic_right_arrow_triangle"
+                        android:layout_height="@dimen/_12sdp"
+                        android:orientation="vertical" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPnSPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/gray_bg"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvPnSPwd"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_15sdp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPnSTermsofService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/gray_bg"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvPnSTermsofService"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms of Service"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_15sdp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPnSPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/gray_bg"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvPnSPrivacy"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_15sdp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    </LinearLayout>
+</layout>

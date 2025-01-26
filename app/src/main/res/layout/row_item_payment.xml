@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_row_item_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+            <LinearLayout
+                android:id="@+id/linear_row_item_newPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:gravity="center_vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_newPay_leftrowOne_item_type"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:id="@+id/tv_newPay_rightOne_noofitems"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:layout_gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_newPay_leftrowTwo_itemName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_newPay_leftrowThree_itemCalculation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:id="@+id/tv_newPay_rightrowThree_itemCalculation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:layout_gravity="bottom"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_newPay_leftrowFour_item_type"
+                                android:visibility="visible"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_newPay_rightrowFour_item_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_newPay_leftrowFive_item_type"
+                                android:visibility="visible"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.65"
+                                android:text=""
+                                android:maxLines="5"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_11sdp"
+                                />
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@android:color/black"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

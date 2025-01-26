@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_row_sale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSalesItemRowSale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/gray_bg"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_7sdp"
+                    android:gravity="center_vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_sl_firstRow_Custname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.9"
+                                android:text="XYZ Gems Ltd."
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_14sdp"/>
+
+
+                            <TextView
+                                android:id="@+id/tv_sl_firstRow_CustVerificaton"
+                                android:layout_width="0dp"
+                                android:visibility="gone"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:text="Not Verified"
+                                android:gravity="end"
+                                android:textColor="@android:color/holo_red_dark"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_14sdp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:paddingTop="@dimen/_4sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_sl_secondRow_invoice_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SI-INV-01-2020-00001"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_blue_dot_12dp"
+                                android:layout_gravity="center_vertical"
+                                app:tint="@android:color/darker_gray"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"/>
+
+                            <TextView
+                                android:id="@+id/tv_sl_secondRow_transactiondate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="18-Sept-2020"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:paddingTop="@dimen/_4sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_sl_thirdRow_noofitems"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2 items"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_blue_dot_12dp"
+                                android:layout_gravity="center_vertical"
+                                app:tint="@android:color/darker_gray"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"/>
+
+                            <TextView
+                                android:id="@+id/tv_sl_thirdRow_total_fine_wt"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="Total 355.115 fine wt."
+                                android:gravity="center"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,75 @@
+package com.goldbookapp.model
+
+data class CalculationReceiptModel(
+    val data: DataReceipt?,
+    val code: String?,
+    val message: String?,
+    val status: Boolean?,
+    val errormessage: LoginModel.Errormessage?
+) {
+    data class DataReceipt(
+        val total_net_wt_with_IRT: String?,
+        val total_fine_wt_with_IRT: String?,
+        val total_fine_wt_with_IRT_short_term: String?,
+        val total_fine_wt_with_IRT_term: String?,
+        val total_silver_fine_wt_with_IRT: String?,
+        val total_silver_fine_wt_with_IRT_short_term: String?,
+        val total_silver_fine_wt_with_IRT_term: String?,
+        val total_amount_with_IRT: String?,
+        val total_quantity: String?,
+        val total_gross_wt: String?,
+        val total_less_wt: String?,
+        val total_net_wt: String?,
+        val total_fine_wt: String?,
+        val total_misc_charges: String?,
+        val tcs_tds_taxable_amount: String?,
+        val silver_total_quantity: String?,
+        val silver_total_gross_wt: String?,
+        val silver_total_less_wt: String?,
+        val silver_total_net_wt: String?,
+        val silver_total_fine_wt: String?,
+        val silver_total_misc_charges: String?,
+        val silver_total_amount: String?,
+        val other_total_quantity: String?,
+        val other_total_gross_wt: String?,
+        val other_total_net_wt: String?,
+        val other_total_misc_charges: String?,
+        val other_total_amount: String?,
+        val final_total_amount: String?,
+        val sub_total: String?,
+        val round_off_total: String?,
+        val total_amount: String?,
+        val grand_total: String?,
+        val grand_total_short_term: String?,
+        val grand_total_term: String?,
+        val opening_cash_balance: String?,
+        val opening_cash_balance_short_term: String?,
+        val opening_cash_balance_term: String?,
+        val running_cash_balance: String?,
+        val running_cash_balance_short_term: String?,
+        val running_cash_balance_term: String?,
+        val closing_cash_balance: String?,
+        val closing_cash_balance_short_term: String?,
+        val closing_cash_balance_term: String?,
+        val opening_fine_balance: String?,
+        val opening_fine_balance_short_term: String?,
+        val opening_fine_balance_term: String?,
+        val opening_silver_fine_balance: String?,
+        val opening_silver_fine_balance_short_term: String?,
+        val opening_silver_fine_balance_term: String?,
+        val running_fine_balance: String?,
+        val running_fine_balance_short_term: String?,
+        val running_fine_balance_term: String?,
+        val closing_fine_balance: String?,
+        val closing_fine_balance_short_term: String?,
+        val closing_fine_balance_term: String?,
+        val closing_silver_fine_balance: String?,
+        val closing_silver_fine_balance_short_term: String?,
+        val closing_silver_fine_balance_term: String?
+
+    )
+
+
+}
+
+

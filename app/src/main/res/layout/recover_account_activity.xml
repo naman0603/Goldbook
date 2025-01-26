@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include layout="@layout/toolbar_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+
+           <!-- <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recover_account"
+                android:textColor="@color/header_black_text"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:textSize="@dimen/header_text_size"/>-->
+
+            <TextView
+                android:id="@+id/recoverAccountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recover_account_text"
+                android:textColor="@color/gray_text"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_14sdp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvEmailMobileInputLayout"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter email/mobile number"
+                android:layout_marginTop="@dimen/_40sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtEmailMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    android:imeOptions="actionDone"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:background="@android:color/white"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:focusable="true"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reset"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:gravity="center"/>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+</LinearLayout>
+
+</layout>

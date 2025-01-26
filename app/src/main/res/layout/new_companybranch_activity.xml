@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+ <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include layout="@layout/toolbar_layout"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true">
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/gray_bg"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Information"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_14sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvMrNewBranch"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_5sdp"
+
+                                android:layout_weight="0.3">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtNameTitleNewBranch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:onClick="openNameTitlePopup"
+                                    android:text="Mr"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_white"
+                                    android:drawableTint="@color/drop_down_arrow_color"
+                                    android:clickable="true"
+                                    android:focusable="false"
+                                    android:cursorVisible="false"/>
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvFirstNameNewBranch"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="0.7"
+
+                                android:hint="First Name">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtFirstNameNewBranch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="textCapWords|textNoSuggestions" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvLastNameNewBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            android:hint="Last Name">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtLastNameNewBranch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="textCapWords|textNoSuggestions" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvBranchNameNewBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            android:hint="Branch Name">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtBranchNameNewBranch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+
+                                android:ellipsize="end"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="textCapWords|textNoSuggestions" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvBranchCodeNewBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            android:hint="Branch Code">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtBranchCodeNewBranch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="textCapCharacters" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvMobileNewBranch"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="0.5"
+
+                                android:hint="Mobile Number">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtMobileNewBranch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="phone"
+                                    android:digits="0123456789"
+                                    android:maxLength="10"
+                                    android:imeOptions="actionNext"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvAddNumberNewBranch"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_weight="0.5"
+
+                                android:hint="Additional Number">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtAddNumberNewBranch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="phone"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:imeOptions="actionNext"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvEmailNewBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            android:hint="Email">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtEmailNewBranch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="textEmailAddress" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardCompanyAddNewBranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/gray_bg"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:onClick="onClick"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvAddAddressNewBranch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" + Add Branch Address"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_14sdp"/>
+
+                        <LinearLayout
+                            android:id="@+id/linear_branch_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Branch address"
+                                    android:textColor="@android:color/black"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:textSize="@dimen/_14sdp"/>
+
+                                <ImageView
+                                    android:layout_width="@dimen/_14sdp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_edit"
+                                    android:adjustViewBounds="true"
+                                    android:layout_marginStart="@dimen/_10sdp"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_branch_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_14sdp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/gray_bg"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Branch GST Information"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_14sdp"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Are you GST registered Branch?"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:textSize="@dimen/_12sdp"
+                                />
+
+                            <RadioGroup
+                                android:id="@+id/radiogrpNewBranch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radiobtnGSTYesNewBranch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yes"
+                                    android:buttonTint="@color/colorPrimary"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"/>
+
+                                <RadioButton
+                                    android:id="@+id/radiobtnGSTNoNewBranch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No"
+                                    android:buttonTint="@color/colorPrimary"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5sdp"/>
+
+                            </RadioGroup>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvGSTINNewBranch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:hint="GSTIN">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtGSTINNewBranch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:imeOptions="actionDone"
+                                    android:maxLength="15"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="textCapCharacters"
+                                    />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+    <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSaveAdd_Branch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:padding="@dimen/_5sdp"
+        android:text="Save"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_13sdp"
+        app:fabRippleColor="@color/gray_text"
+        app:fabElevation="5dp"
+        app:fabIconPosition="start"
+        app:fabSizes="normal"
+        app:fabType="circle" />
+
+</RelativeLayout>
+</layout>

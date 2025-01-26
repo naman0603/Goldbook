@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/actionAllCustomer"
+        android:title="@string/all_customers"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/actionActiveCustomers"
+        android:title="@string/active_customers"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/actionInActiveCustomers"
+        android:title="@string/inactive_customers"
+        app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/linearMainSortCust"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:background="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Sort By"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_12sdp"/>
+            <TextView
+                android:id="@+id/resetAllCustSort"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:textAlignment="textEnd"
+                android:layout_height="wrap_content"
+                android:text="Reset All"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_12sdp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/name"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_14sdp"/>
+
+            <ImageView
+                android:id="@+id/imgNameAscSortCust"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sort_up_grey"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:adjustViewBounds="true"/>
+
+            <ImageView
+                android:id="@+id/imgNameDescSortCust"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/sort_down_grey"
+                android:adjustViewBounds="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/o_s_fine_bal"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_14sdp"/>
+
+            <ImageView
+                android:id="@+id/imgFineAscSortCust"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/sort_up_grey"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:adjustViewBounds="true"/>
+
+            <ImageView
+                android:id="@+id/imgFineDescSortCust"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/sort_down_grey"
+                android:adjustViewBounds="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/o_s_cash_bal"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_14sdp"/>
+
+            <ImageView
+                android:id="@+id/imgCashAscSortCust"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/sort_up_grey"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:adjustViewBounds="true"/>
+
+            <ImageView
+                android:id="@+id/imgCashDescSortCust"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/sort_down_grey"
+                android:adjustViewBounds="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/last_transaction"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_14sdp"/>
+
+            <ImageView
+                android:id="@+id/imgLastTranAscSortCust"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/sort_up_grey"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:adjustViewBounds="true"/>
+
+            <ImageView
+                android:id="@+id/imgLastTranDescSortCust"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/sort_down_grey"
+                android:adjustViewBounds="true"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

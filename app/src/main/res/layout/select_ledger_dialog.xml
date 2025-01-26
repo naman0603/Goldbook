@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/llLedgerDialogRoot"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Select Ledger"
+                        android:gravity="start"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textColor="@color/header_black_text"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_16sdp"/>
+
+                    <ImageView
+                        android:id="@+id/seach_ledger_cancel"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:src="@drawable/ic_times"
+                        android:adjustViewBounds="true"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+
+                        android:layout_gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center_vertical">
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+
+                                    <com.goldbookapp.searchablespinner.SearchableSpinner
+                                        android:id="@+id/txtLedger1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        app:showSearch="true"
+                                        app:sort="true"
+                                        app:label_hint="SGST Ledger"
+                                        app:label_color="@color/blackcolor"
+                                        app:selected_item_color="@color/colorAccent"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        />
+                                    <View
+                                        android:id="@+id/sl1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@android:color/black" />
+                                    <com.goldbookapp.searchablespinner.SearchableSpinner
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:id="@+id/txtLedger2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        app:showSearch="true"
+                                        app:sort="true"
+                                        app:label_hint="CGST Ledger"
+                                        app:label_color="@color/blackcolor"
+                                        app:selected_item_color="@color/colorAccent"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        />
+                                    <View
+                                        android:id="@+id/sl2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@android:color/black" />
+
+                                    <com.goldbookapp.searchablespinner.SearchableSpinner
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:id="@+id/txtLedger3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        app:showSearch="true"
+                                        app:sort="true"
+                                        app:label_hint="IGST Ledger"
+                                        app:label_color="@color/blackcolor"
+                                        app:selected_item_color="@color/colorAccent"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        />
+                                    <View
+                                        android:id="@+id/sl3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@android:color/black" />
+                                    <com.goldbookapp.searchablespinner.SearchableSpinner
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:id="@+id/txtLedger4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        app:showSearch="true"
+                                        app:sort="true"
+                                        app:label_hint="TCS Ledger"
+                                        app:label_color="@color/blackcolor"
+                                        app:selected_item_color="@color/colorAccent"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        />
+                                    <View
+                                        android:id="@+id/sl4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@android:color/black" />
+                                    <com.goldbookapp.searchablespinner.SearchableSpinner
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:id="@+id/txtLedger5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        app:showSearch="true"
+                                        app:sort="true"
+                                        app:label_hint="TDS Ledger"
+                                        app:label_color="@color/blackcolor"
+                                        app:selected_item_color="@color/colorAccent"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        />
+                                    <View
+                                        android:id="@+id/sl5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@android:color/black" />
+                                    <com.goldbookapp.searchablespinner.SearchableSpinner
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:id="@+id/txtLedger6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        app:showSearch="true"
+                                        app:sort="true"
+                                        app:label_hint="Round-Off Ledger"
+                                        app:label_color="@color/blackcolor"
+                                        app:selected_item_color="@color/colorAccent"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        />
+                                    <View
+                                        android:id="@+id/sl6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.5dp"
+                                        android:background="@android:color/black" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/seach_ledger_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:clickable="true"
+                        app:cardElevation="0dp"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:gravity="center"
+                            android:text="Save"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@android:color/white" />
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

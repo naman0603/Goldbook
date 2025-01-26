@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+
+        <LinearLayout
+            android:id="@+id/ll_row_day_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+
+            <LinearLayout
+                android:id="@+id/linear_day_row_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/day_tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="01-May-2021"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:textSize="@dimen/_12sdp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_day_trans"
+                    android:layout_width="match_parent"
+                    tools:listitem="@layout/row_contact_trans"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+                <View
+                    android:id="@+id/bottomline_dayreport"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@android:color/black"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

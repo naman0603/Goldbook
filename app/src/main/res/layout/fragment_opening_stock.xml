@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include layout="@layout/toolbar_layout"/>
+
+        <LinearLayout
+            android:id="@+id/llFragOpeningStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/gray_bg"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center_vertical">
+
+                    <com.goldbookapp.utils.DebounceEditText
+                        android:id="@+id/txtSearchOpeningStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_14sdp"
+                        android:drawableStart="@drawable/ic_search_black_24dp"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:inputType="text|textNoSuggestions"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:clickable="true"
+                        android:imeOptions="actionSearch"
+                        android:background="@android:color/transparent"
+                        android:hint="Search"/>
+
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/pb_loader_openingStock"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:visibility="gone"
+                    android:layout_gravity="end|center_vertical" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeContainerOpeningStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewOpeningStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <TextView
+                android:id="@+id/tvNoRecordOpeningStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_record_found"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:visibility="gone"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                style="@style/Widget.MaterialComponents.FloatingActionButton"
+                android:id="@+id/addOpeningStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_15sdp"
+                app:backgroundTint="@color/colorPrimary"
+                android:elevation="0dp"
+                app:elevation="0dp"
+                app:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_add_white_24dp"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e59d1e</color>
+    <color name="colorPrimaryDark">#ce8d1b</color>
+    <color name="colorAccent">#e59d1e</color>
+
+    <!--<color name="colorPrimary">#ffa600</color>
+    <color name="colorPrimaryDark">#F29D00</color>
+    <color name="colorAccent">#ffa600</color>-->
+
+    <color name="otpbg">#E6E59D14</color>
+    <color name="yellow_text">#e29e17</color>
+    <color name="header_black_text">#101010</color>
+    <color name="gray_bg">#f6f6f4</color>
+    <color name="gray_text">#5b5b5b</color>
+
+    <color name="screen_background">#D81B60</color>
+    <color name="drop_down_arrow_color">#5b5b5b</color>
+    <color name="drop_down_arrow_colorkkkk">#101010</color>
+
+    <color name="fab_label_bg">#353535</color>
+
+    <color name="ucrop_color_statusbar">@color/colorPrimaryDark</color>
+    <color name="red">#d1503d</color>
+    <color name="green">#4fb786</color>
+    <color name="debit_color">#d1503d</color>
+    <color name="credit_color">#4fb786</color>
+    <color name="outwardcolor">#d1503d</color>
+    <color name="inwardcolor">#4fb786</color>
+    <color name="design_textinput_error_color_light">#FFD50000</color>
+    //app icon bg
+    <color name="ic_launcher_background">#FEBA02</color>
+    <color name="light_grey">#79AAAAAA</color>
+    <color name="lighter_grey">#F5F5F5</color>
+    <color name="blackcolor">#FF000000</color>
+    <color name="dash_customer_bg">#99CCFFCC</color>
+    <color name="dash_supplier_bg">#99FFCCCC</color>
+
+    <!--Background color : #ffffff
+    Primary gold color : #e59d1e
+    Secondary color : #101010
+    Gray color : #5b5b5b-->
+    // app lock
+    <color name="material_blue_500">#009688</color>
+
+    <color name="material_blue_700">#00796B</color>
+
+    <color name="material_green_A200">#FD87A9</color>
+
+    <color name="dark_grey_color">#4a636f</color>
+    <color name="light_blue_500">#03a9f4</color>
+    <color name="blue_gray">#4b636f</color>
+    <color name="light_gray">#f0f6f9</color>
+    <color name="dark_gray">#9baab2</color>
+    <color name="light_gray_bar">#eaf2f5</color>
+    <color name="end_icon_gray">#8F8F8E</color>
+
+    <color name="warning_color">#f4511e</color>
+    <color name="hint_color">#42000000</color>
+    <color name="success_color">#009688</color>
+
+</resources>

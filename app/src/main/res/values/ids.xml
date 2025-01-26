@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fab_no_label" type="id" />
+    <item name="fab_custom_color" type="id" />
+    <item name="fab_long_label" type="id" />
+    <item name="fab_custom_theme" type="id" />
+    <item name="fab_add_action" type="id" />
+    <item name="fab_replace_action" type="id" />
+    <item name="fab_remove_action" type="id" />
+
+    <item name="fab_payment_action" type="id" />
+    <item name="fab_receipt_action" type="id" />
+    <item name="fab_purchase_action" type="id" />
+    <item name="fab_sale_action" type="id" />
+
+    <item name="fab_customer_action" type="id" />
+    <item name="fab_supplier_action" type="id" />
+    <item name="fab_item_action" type="id" />
+
+
+
+</resources>

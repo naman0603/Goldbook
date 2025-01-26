@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="itemDetailViewModel"
+            type="com.goldbookapp.ui.activity.viewmodel.ItemDetailViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include layout="@layout/toolbar_layout"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/llitemDetail"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:layout_weight="0.9">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Stock in Hand (N.W.)"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_14sdp"/>
+
+                        <TextView
+                            android:id="@+id/tvStockHandItemDeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text=""
+                            android:singleLine="true"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_22sdp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.4">
+
+                        <ImageView
+                            android:id="@+id/imgItemData"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/gray_bg"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center_vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="General Information"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:textSize="@dimen/_14sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Item code"
+                            android:textColor="@color/gray_text"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:id="@+id/tvItemCodeItemDeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{itemDetailViewModel.itemDetails.data.item.item_code}"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Category"
+                            android:textColor="@color/gray_text"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:id="@+id/tvCategoryItemDeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{itemDetailViewModel.itemDetails.data.item.category_name}"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unit of Measure (UoM)"
+                            android:textColor="@color/gray_text"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:id="@+id/tvMeasureUnitItemDeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{itemDetailViewModel.itemDetails.data.item.unit_name}"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="0.5">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Maintain stock in?"
+                                    android:textColor="@color/gray_text"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                                <TextView
+                                    android:id="@+id/tvMaintainStockInValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{itemDetailViewModel.itemDetails.data.item.maintain_stock_in}"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="0.5">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Unit"
+                                    android:textColor="@color/gray_text"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                                <TextView
+                                    android:id="@+id/tvUnitValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{itemDetailViewModel.itemDetails.data.item.unit_name}"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/itemdetail_PrefVendorLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Preferred vendor(s)"
+                            android:textColor="@color/gray_text"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/tvPreferredVendorItemDeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/gray_bg"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center_vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sales &amp; Purchase Information"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:textSize="@dimen/_14sdp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="0.5">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sales Wast."
+                                    android:textColor="@color/gray_text"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                                <TextView
+                                    android:id="@+id/tvSalesWastItemDeta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{itemDetailViewModel.itemDetails.data.item.sales_wastage}"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="0.5">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Purchase Wast."
+                                    android:textColor="@color/gray_text"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                                <TextView
+                                    android:id="@+id/tvPurchaseWastItemDeta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{itemDetailViewModel.itemDetails.data.item.purchase_wastage}"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="0.5">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sales M.C."
+                                    android:textColor="@color/gray_text"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                                <TextView
+                                    android:id="@+id/tvSalesMcItemDeta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="0.5">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Purchase M.C."
+                                    android:textColor="@color/gray_text"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                                <TextView
+                                    android:id="@+id/tvPurchaseMcItemDeta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/_4sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textSize="@dimen/_12sdp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</layout>

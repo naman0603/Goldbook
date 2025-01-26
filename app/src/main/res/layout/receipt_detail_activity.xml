@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llReceiptDetail_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/tv_Receiptdetail_custname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:singleLine="true"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_16sdp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_Receiptdetail_noofitems"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <TextView
+                                    android:id="@+id/tv_Receiptdetail_items_desc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:singleLine="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Opening Bal :"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="Gold: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_14sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvOpenBalFineDetailReceipt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text=""
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_14sdp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="Silver: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_14sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvOpenBalFineSilverDetailReceipt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text=""
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_14sdp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="Cash: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_14sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvOpenBalCashDetailReceipt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text=""
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_14sdp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_2sdp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="Date: "
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_Receiptdetail_transactiondate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:singleLine="true"
+                                        android:text=""
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_2sdp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="Status: "
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/tv_Receiptdetail_right_verification"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text=""
+                                        android:textColor="#4fb786"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/tv_Receiptdetail_right_dateWithTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:singleLine="true"
+                                        android:text=""
+                                        android:textColor="@color/gray_text"
+                                        android:textSize="@dimen/_12sdp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:id="@+id/linear_calculation_view_receipt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <View
+                            android:id="@+id/v1"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:background="@android:color/black"/>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_receipt_itemdetail_heading"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv_newreceipt_left_items"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:text="Particulars"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:id="@+id/tv_newreceipt_right_qty_finewt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="end"
+                                android:text="Qty/Fine Wt."
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/v2"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@android:color/black"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_Receiptdetail_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_newreceipt_metalweights"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_newreceipt_metalgold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:gravity="start"
+                                    android:text="Gold Weights:"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_gross_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="G: 380000.780"
+                                            android:layout_weight="0.33"
+                                            android:gravity="end"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_less_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:layout_weight="0.33"
+                                            android:text="L: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_net_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:layout_weight="0.33"
+                                            android:text="N: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:layout_weight="0.34"
+                                        android:text=""
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newreceipt_itemquantity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:layout_weight="0.33"
+                                        android:text="Qty: 300"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newreceipt_fine_wt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:layout_weight="0.33"
+                                        android:gravity="end"
+                                        android:text="F: 380000.780"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="visible" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_newreceipt_metalsilver"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:gravity="start"
+                                    android:text="Silver Weights:"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_silver_gross_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="G: 380000.780"
+                                            android:layout_weight="0.33"
+                                            android:gravity="end"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_silver_less_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:layout_weight="0.33"
+                                            android:text="L: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_silver_net_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:layout_weight="0.33"
+                                            android:text="N: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="end"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:layout_weight="0.34"
+                                        android:text=""
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newreceipt_silver_itemquantity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:layout_weight="0.33"
+                                        android:text="Qty: 300"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newreceipt_silver_fine_wt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:layout_weight="0.33"
+                                        android:gravity="end"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="F: 380000.780"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="visible" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_newreceipt_metalother"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:gravity="start"
+                                    android:text="Other Weights:"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_other_gross_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="G: 380000.780"
+                                            android:layout_weight="0.33"
+                                            android:gravity="end"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_other_less_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:layout_weight="0.33"
+                                            android:text="L: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_other_net_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:layout_weight="0.33"
+                                            android:text="N: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="end"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:layout_weight="0.34"
+                                        android:text=""
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newreceipt_other_itemquantity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:layout_weight="0.33"
+                                        android:text="Qty: 300"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newreceipt_other_fine_wt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:layout_weight="0.33"
+                                        android:gravity="end"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="F: 380000.780"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="visible" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_newReceipt_subtotalRoot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:text="Sub Total"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="G: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_subtotalCol1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="0.000"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="end|center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/proxima_nova_regular"
+                                                android:text="C: "
+                                                android:textColor="@android:color/black"
+                                                android:textSize="@dimen/_12sdp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_newreceipt_subtotalCol2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/proxima_nova_regular"
+                                                android:gravity="end"
+                                                android:text="0.000"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="@dimen/_12sdp" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="S: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_subtotalCol1_Silver"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="0.000"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvIssueReceiveListDetail"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            tools:listitem="@layout/row_cashbank_subtrans"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_newReceipt_subtotalBelowRoot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_newReceipt_TotalDueLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:text="Total Due"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="0.6">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_newreceipt_totaldue_gold_label"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="G: "
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/tv_newreceipt_totalDue_gold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="0.250"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="end|center"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="C: "
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/tv_newreceipt_totalDue_cash"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="5896352.55Cr"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_newreceipt_silver_totaldue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="S: "
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/tv_newreceipt_totalDue_silver"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="123.698Dr"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_closingbal_Newreceipt"
+                            android:visibility="visible"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:gravity="start"
+                                android:text="Closing Bal :"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/lblcloseFineGoldNewReceipt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="G: "
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/tvCloBalFineWtDetailReceipt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text=""
+                                        android:textColor="@color/red"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/lblcloseFineSilverNewReceipt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="S: "
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tvCloBalSilverDetailReceipt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text=""
+                                        android:textColor="@color/red"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end|center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/lblcloseCashNewReceipt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="C: "
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/tvCloBalCashDetailReceipt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text=""
+                                        android:textColor="@color/green"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--<View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@android:color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:text="Particulars"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:gravity="end"
+                            android:text="Qty/Fine Wt."
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@android:color/black" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_Receiptdetail_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_3sdp"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/txtectnL"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Total Qty"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newReceipt_itemquantity"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="500"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/txtcionLbel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Total Charges"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newReceipt_misc_charges"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_3sdp"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/tv_newReceipt_left_gross_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Gross Wt:"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newReceipt_gross_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/tv_newReceipt_left_less_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Less Wt:"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newReceipt_less_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_3sdp"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/tv_newReceipt_left_net_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Net Wt:"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newReceipt_net_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/txtSecionLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Fine Wt:"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newReceipt_fine_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:id="@+id/ll_newReceipt_subtotalRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+
+
+                            <TextView
+                                android:id="@+id/tv_newReceipt_Subtotallabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:text="Sub-Total"
+                                android:layout_weight="1"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_newreceipt_subtotalCol1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="0.000"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_newreceipt_subtotalCol2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:gravity="end"
+                            android:layout_weight="1"
+                            android:text="0.000"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvIssueReceiveListDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:clickable="false"
+                        android:nestedScrollingEnabled="false"
+                        android:visibility="gone"
+                        tools:listitem="@layout/row_cashbank_subtrans" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_newReceipt_subtotalBelowRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_newReceipt_TotalDueLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:text="Total Due"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/tv_newReceipt_totalDue_col1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:gravity="end"
+                                android:text="0.250"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+
+
+                            <TextView
+                                android:id="@+id/tv_newReceipt_totalDue_col2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:gravity="end"
+                                android:text="37.08"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_closingbal_DetailReceipt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:gravity="start"
+                            android:text="Closing Bal :"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/tvCloBalFineWtDetailReceipt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:gravity="end"
+                            android:text="25.250 Dr"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/tvCloBalCashDetailReceipt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:gravity="end"
+                            android:text="37.08 Cr"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                    </LinearLayout>-->
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:text="Notes:"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_Receiptdetail_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_attachment_label_Receipt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:text="Attachment:"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_Receiptdetail_attachmentone"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_Receiptdetail_attachmenttwo"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <ProgressBar
+                android:id="@+id/progressBar_Receiptdetail"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

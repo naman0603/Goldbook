@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/gray_bg"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:id="@+id/tvTosHeadingOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Heading 1"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_15sdp"/>
+
+
+                <TextView
+                    android:id="@+id/tvTosDescriptionOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Description One"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_11sdp"/>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardTosTwo"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/gray_bg"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/tvTosHeadingTwo"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    tools:text="Heading 2"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_15sdp"/>
+
+
+                <TextView
+                    android:id="@+id/tvTosDescriptionTwo"
+                    android:paddingRight="@dimen/_50sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Description two"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_11sdp"/>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item
+        android:id="@+id/actionSendStatement"
+        android:title="@string/send_statement"
+        app:showAsAction="never"/>-->
+    <item
+        android:id="@+id/actionInactiveItemData"
+        android:title="@string/mark_as_inactive"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/actionDeleteItemData"
+        android:title="@string/delete"
+        android:visible="false"
+        app:showAsAction="never"/>
+</menu>

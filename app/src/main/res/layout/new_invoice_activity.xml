@@ -1,0 +1,2001 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_layout" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvCustNameNewInvoice"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Contact Name"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtCustNameNewInvoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Opening Bal :"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="start|center"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/lblopenFineGoldNewInvoice"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="Gold: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:id="@+id/tvOpenBalFineNewInvoice"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text=""
+                                            android:textColor="@color/red"
+                                            android:textSize="@dimen/_14sdp" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="start|center"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/lblopenFineSilverNewInvoice"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="Silver: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:id="@+id/tvOpenBalFineSilverNewInvoice"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text=" "
+                                            android:textColor="@color/red"
+                                            android:textSize="@dimen/_14sdp" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="start|center"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/lblopenCashNewInvoice"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="Cash: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:visibility="gone" />
+
+                                        <TextView
+                                            android:id="@+id/tvOpenBalCashNewInvoice"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text=""
+                                            android:textColor="@color/green"
+                                            android:textSize="@dimen/_14sdp" />
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvInvoiceNewInvoice"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="0.5"
+                                    android:enabled="false"
+
+                                    android:hint="Invoice #">
+
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtInvoiceNewInvoice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:focusable="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="textCapWords|textNoSuggestions"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvDateNewInvoice"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_weight="0.5"
+
+                                    android:hint="Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtDateNewInvoice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:clickable="true"
+                                        android:cursorVisible="false"
+                                        android:focusable="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/checkInGstNewnvoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:buttonTint="@color/colorPrimary"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:text="Is GST applicable?"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvSupplyNewInvoice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:enabled="false"
+
+                                android:hint="Place of supply"
+                                android:visibility="gone">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtSupplyNewInvoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress|textNoSuggestions"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvReffNewInvoice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:enabled="true"
+                                android:hint="Reference No."
+                                android:visibility="visible">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtReffNewInvoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:focusable="true"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress|textNoSuggestions"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardAddItemNewInvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:gravity="center_horizontal"
+                            android:padding="@dimen/_10sdp"
+                            android:text="+ Add an item"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:id="@+id/linear_calculation_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:id="@+id/v1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:background="@android:color/black"
+                            android:visibility="visible" />
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_invoice_itemdetail_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tv_newinvoice_left_items"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:text="Particulars"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <TextView
+                                android:id="@+id/tv_newinvoice_right_qty_finewt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:gravity="end"
+                                android:text="Qty/Fine Wt."
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/v2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@android:color/black"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_newinvoice_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:visibility="visible" />
+
+
+                        <!--  <LinearLayout
+                              android:id="@+id/ll_newinvoice_metalweights"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="@dimen/_10sdp"
+                              android:orientation="horizontal"
+                              android:visibility="visible"
+                              android:weightSum="1">
+
+                              <TextView
+                                  android:id="@+id/tv_newinvoice_left_metal_wt"
+                                  android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="0.3"
+                                  android:fontFamily="@font/proxima_nova_bold"
+                                  android:gravity="end"
+                                  android:text="Metal Weights:"
+                                  android:textColor="@android:color/black"
+                                  android:textSize="@dimen/_12sdp" />
+
+                              <LinearLayout
+                                  android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="0.35"
+                                  android:orientation="vertical">
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_left_gross_wt"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_regular"
+                                      android:gravity="end"
+                                      android:text="Gross Wt:"
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_left_less_wt"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_regular"
+                                      android:gravity="end"
+                                      android:text="Less Wt:"
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_left_net_wt"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_regular"
+                                      android:gravity="end"
+                                      android:text="Net Wt:"
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_left_fine_wt"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_bold"
+                                      android:gravity="end"
+                                      android:text="Fine Wt:"
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+                              </LinearLayout>
+
+
+                              <LinearLayout
+                                  android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="0.35"
+                                  android:orientation="vertical">
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_gross_wt"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_regular"
+                                      android:gravity="end"
+                                      android:text="380.780 gm"
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_less_wt"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_regular"
+                                      android:gravity="end"
+                                      android:text="2.000 gm"
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_net_wt"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_regular"
+                                      android:gravity="end"
+                                      android:text=""
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_fine_wt"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_bold"
+                                      android:gravity="end"
+                                      android:text="350.115 "
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+
+                              </LinearLayout>
+
+                          </LinearLayout>
+
+                          <View
+
+                              android:layout_width="match_parent"
+                              android:layout_height="0.5dp"
+                              android:layout_gravity="end"
+                              android:layout_marginTop="@dimen/_10sdp"
+                              android:layout_marginBottom="@dimen/_5sdp"
+                              android:background="@android:color/black"
+                              android:visibility="visible" />
+
+                          <LinearLayout
+
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:visibility="visible"
+                              android:weightSum="1">
+
+                              <TextView
+                                  android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="0.3"
+                                  android:fontFamily="@font/proxima_nova_bold"
+                                  android:gravity="end"
+                                  android:text=""
+                                  android:textColor="@android:color/black"
+                                  android:textSize="@dimen/_12sdp" />
+
+                              <LinearLayout
+                                  android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="0.35"
+                                  android:orientation="vertical">
+
+
+                                  <TextView
+
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_bold"
+                                      android:gravity="end"
+                                      android:text="Total Qty:"
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+                                  <TextView
+
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_bold"
+                                      android:gravity="end"
+                                      android:text="Total Charges:"
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+
+                              </LinearLayout>
+
+                              <LinearLayout
+                                  android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="0.35"
+                                  android:orientation="vertical">
+
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_itemquantity"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_bold"
+                                      android:gravity="end"
+                                      android:text="300.000 "
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+
+                                  <TextView
+                                      android:id="@+id/tv_newinvoice_misc_charges"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:fontFamily="@font/proxima_nova_bold"
+                                      android:gravity="end"
+                                      android:text="300.000 "
+                                      android:textColor="@android:color/black"
+                                      android:textSize="@dimen/_12sdp" />
+
+                              </LinearLayout>
+
+                          </LinearLayout>
+
+                          <View
+                              android:id="@+id/v3"
+                              android:layout_width="match_parent"
+                              android:layout_height="0.5dp"
+                              android:layout_gravity="end"
+                              android:layout_marginTop="@dimen/_10sdp"
+                              android:layout_marginBottom="@dimen/_5sdp"
+                              android:background="@android:color/black"
+                              android:visibility="visible" />
+  -->
+                        <!--<LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_3sdp"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/txtectnL"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Total Qty"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_itemquantity"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="500"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/txtcionLbel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Total Charges"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_misc_charges"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_3sdp"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_left_gross_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Gross Wt:"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_gross_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_left_less_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Less Wt:"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_less_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_3sdp"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_left_net_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Net Wt:"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_net_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:id="@+id/txtSecionLabel"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_marginBottom="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="Fine Wt:"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_fine_wt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="end"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="1234567890123"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_13sdp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>-->
+
+                        <LinearLayout
+                            android:id="@+id/ll_newinvoice_metalweights"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_newinvoice_metalgold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:gravity="start"
+                                    android:text="Gold Weights:"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_gross_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.33"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="G: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_less_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.33"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="L: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_net_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.33"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="N: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.34"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text=""
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_itemquantity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.33"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text="Qty: 300"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_fine_wt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.33"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text="F: 380000.780"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="visible" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_newinvoice_metalsilver"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:gravity="start"
+                                    android:text="Silver Weights:"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_silver_gross_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.33"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="G: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_silver_less_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.33"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="L: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_silver_net_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.33"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="N: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.34"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text=""
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_silver_itemquantity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.33"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text="Qty: 300"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_silver_fine_wt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_weight="0.33"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text="F: 380000.780"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="visible" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_newinvoice_metalother"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:gravity="start"
+                                    android:text="Other Weights:"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_other_gross_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.33"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="G: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_other_less_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.33"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="L: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_other_net_wt"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.33"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="N: 380000.780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.34"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text=""
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_other_itemquantity"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.33"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text="Qty: 300"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_other_fine_wt"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_weight="0.33"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text="F: 380000.780"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:background="@android:color/black"
+                                    android:visibility="visible" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_newinvoice_subtotalRoot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:text="Sub Total"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="G: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_subtotalCol1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="0.000"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="end|center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/proxima_nova_regular"
+                                                android:text="C: "
+                                                android:textColor="@android:color/black"
+                                                android:textSize="@dimen/_12sdp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_newinvoice_subtotalCol2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/proxima_nova_regular"
+                                                android:gravity="end"
+                                                android:text="0.000"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="@dimen/_12sdp" />
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="S: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_subtotalCol1_Silver"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:gravity="end"
+                                            android:text="0.000"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvNewinvoiceSgstCol0"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="SGST"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tvNewinvoiceCgstCol0"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="CGST"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tvNewinvoiceIgstCol0"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:text="IGST"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <com.goldbookapp.searchablespinner.SearchableSpinner
+                                        android:id="@+id/tv_newinvoice_sgst_col1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        app:label_color="@color/blackcolor"
+                                        app:label_hint="SGST Ledger"
+                                        app:selected_item_color="@color/colorAccent"
+                                        app:showSearch="true"
+                                        app:sort="true" />
+
+                                    <com.goldbookapp.searchablespinner.SearchableSpinner
+                                        android:id="@+id/tv_newinvoice_cgst_col1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_6sdp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        app:label_color="@color/blackcolor"
+                                        app:label_hint="CGST Ledger"
+                                        app:selected_item_color="@color/colorAccent"
+                                        app:showSearch="true"
+                                        app:sort="true" />
+
+                                    <com.goldbookapp.searchablespinner.SearchableSpinner
+                                        android:id="@+id/tv_newinvoice_igst_col1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        app:label_color="@color/blackcolor"
+                                        app:label_hint="IGST Ledger"
+                                        app:selected_item_color="@color/colorAccent"
+                                        app:showSearch="true"
+                                        app:sort="true" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_sgst_col2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:gravity="end"
+                                        android:text="0.45"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_cgst_col2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:gravity="end"
+                                        android:text="0.45"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_newinvoice_igst_col2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_7sdp"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="end"
+                                        android:text="0.45"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_newinvoice_subtotalBelowRoot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:weightSum="3">
+
+                                <RadioGroup
+                                    android:id="@+id/radiogroupTDSTCSNewInvoice"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/radioTCSNewInvoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_15sdp"
+                                        android:layout_marginLeft="-5dp"
+                                        android:buttonTint="@color/colorPrimary"
+                                        android:checked="true"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="TCS"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:visibility="visible" />
+
+                                    <RadioButton
+                                        android:id="@+id/radioTDSNewInvoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_15sdp"
+                                        android:layout_marginLeft="-5dp"
+                                        android:buttonTint="@color/colorPrimary"
+                                        android:checked="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="TDS"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:visibility="visible" />
+
+
+                                </RadioGroup>
+
+                                <com.goldbookapp.searchablespinner.SearchableSpinner
+                                    android:id="@+id/tv_newinvoice_tdstcs_col1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    app:label_color="@color/blackcolor"
+                                    app:label_hint="TCS Ledger"
+                                    app:selected_item_color="@color/colorAccent"
+                                    app:showSearch="true"
+                                    app:sort="true" />
+
+                                <TextView
+                                    android:id="@+id/tv_newinvoice_tcstds_col2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:gravity="end"
+                                    android:text="6.18"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvIssueReceiveList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:nestedScrollingEnabled="false"
+                                android:visibility="gone"
+                                tools:listitem="@layout/row_cashbank_subtrans" />
+
+                            <LinearLayout
+                                android:id="@+id/llRoundOff"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:id="@+id/tvNewinvoiceRoundOffCol0"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_7sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:text="Adj ( + / - )"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                                <com.goldbookapp.searchablespinner.SearchableSpinner
+                                    android:id="@+id/tv_newinvoice_roundoff_col1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_7sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    app:label_color="@color/blackcolor"
+                                    app:label_hint="RoundOff Led.."
+                                    app:selected_item_color="@color/colorAccent"
+                                    app:showSearch="true"
+                                    app:sort="true" />
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/tv_newinvoice_roundoff_col2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_7sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:gravity="end"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberSigned|numberDecimal"
+                                    android:maxLength="13"
+                                    android:text="6.18"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tv_newinvoice_TotalDueLabel"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_7sdp"
+                                    android:layout_weight="0.4"
+                                    android:fontFamily="@font/proxima_nova_bold"
+                                    android:text="Total Due"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.6"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_totaldue_gold_label"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_7sdp"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="G: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_totalDue_gold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_7sdp"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="0.250"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_7sdp"
+                                            android:gravity="end|center"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/proxima_nova_regular"
+                                                android:text="C: "
+                                                android:textColor="@android:color/black"
+                                                android:textSize="@dimen/_12sdp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_newinvoice_totalDue_cash"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/proxima_nova_regular"
+                                                android:text="5896352.55Cr"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="@dimen/_12sdp" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_newinvoice_silver_totaldue"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="S: "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_newinvoice_totalDue_silver"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/proxima_nova_regular"
+                                            android:text="123.698Dr"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_closingbal_NewInvoice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="Closing Bal :"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/lblcloseFineGoldNewInvoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="G: "
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/tvCloBalFineWtNewInvoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text=""
+                                        android:textColor="@color/red"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/lblcloseFineSilverNewInvoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="S: "
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tvCloBalSilverNewInvoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text=""
+                                        android:textColor="@color/red"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end|center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/lblcloseCashNewInvoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text="C: "
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:visibility="visible" />
+
+                                    <TextView
+                                        android:id="@+id/tvCloBalCashNewInvoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:text=""
+                                        android:textColor="@color/green"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardAddSaleLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <TextView
+                            android:id="@+id/tvAddSaleLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp"
+                            android:text="Add Cash,Bank,Rate-Cut or Metal Payment/Receipt"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <TextView
+                        android:id="@+id/tvAddSaleTaxAnalysis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:text="View Tax Analysis &amp; Ledger Allocation"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_13sdp"
+                        android:visibility="visible" />
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRemarkNewInvoice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:hint="Remarks">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtRemarkNewInvoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="text|textNoSuggestions"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:gravity="center_vertical"
+                                android:text="Attachment:"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <TextView
+                                android:id="@+id/tv_newinvoice_uploadphoto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:gravity="center_vertical"
+                                android:text="+ Click or upload photo"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <ImageView
+                                android:id="@+id/iv_newinvoice_attachment"
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:adjustViewBounds="true"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+        <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSave_AddSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:padding="@dimen/_5sdp"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp"
+            app:fabElevation="5dp"
+            app:fabIconPosition="start"
+            app:fabRippleColor="@color/gray_text"
+            app:fabSizes="normal"
+            app:fabType="circle" />
+
+    </RelativeLayout>
+</layout>

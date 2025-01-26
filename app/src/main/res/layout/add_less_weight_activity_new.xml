@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlAddLesswtRoot"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lay_bottom"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_layout" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llAddItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvItemNameAddLessWeight"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:hint="Item Name"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtItemNameAddLessWeight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:maxLength="30"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:selectAllOnFocus="true"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvItemPiecesAddlessswt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="Pieces">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtItemPiecesAddlessswt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="number"
+                                        android:maxLength="13"
+                                        android:text="0"
+                                        android:imeOptions="actionNext"
+                                        android:selectAllOnFocus="true"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvWeightAddlessswt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="Weight">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtWeightAddlessswt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="numberDecimal"
+                                        android:maxLength="13"
+                                        android:text="0.000"
+                                        android:imeOptions="actionNext"
+                                        android:selectAllOnFocus="true"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvItemUnitAddlesswt"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Unit"
+                                    android:enabled="false"
+                                    app:endIconMode="custom"
+                                    app:endIconTint="@color/drop_down_arrow_color">
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        android:id="@+id/txtItemUnitAddlesswt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:clickable="false"
+                                        android:focusable="false"
+                                        android:focusableInTouchMode="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textCapSentences|textNoSuggestions"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvLesswtAddlesswt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:enabled="false"
+                                android:hint="Less Weight">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtLesswtAddlesswt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:maxLength="13"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <!-- <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:orientation="horizontal"
+                                 android:weightSum="1">
+
+                                 <com.google.android.material.textfield.TextInputLayout
+                                     android:id="@+id/tvLessWtAddItem"
+                                     android:layout_width="0dp"
+                                     android:layout_height="wrap_content"
+                                     android:layout_weight="0.5"
+                                     android:layout_marginEnd="@dimen/_5sdp"
+                                     android:layout_marginTop="@dimen/_10sdp"
+
+                                     android:hint="Less Weight">
+
+                                     <com.google.android.material.textfield.TextInputEditText
+                                         android:id="@+id/txtLessWtAddItem"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="match_parent"
+                                         android:background="@color/gray_bg"
+                                         android:clickable="true"
+                                         android:ellipsize="end"
+                                         android:focusable="false"
+                                         android:fontFamily="@font/proxima_nova_regular"
+                                         android:imeOptions="actionNext"
+                                         android:inputType="numberDecimal"
+                                         android:maxLength="13"
+                                         android:paddingStart="0dp"
+                                         android:paddingEnd="0dp"
+                                         android:singleLine="true"
+                                         android:text="0.000" />
+
+                                 </com.google.android.material.textfield.TextInputLayout>
+
+                                 <com.google.android.material.textfield.TextInputLayout
+                                     android:id="@+id/tvNetWtAddItem"
+                                     android:layout_width="0dp"
+                                     android:layout_height="wrap_content"
+                                     android:layout_weight="0.5"
+                                     android:layout_marginStart="@dimen/_5sdp"
+                                     android:layout_marginTop="@dimen/_10sdp"
+
+                                     android:enabled="false"
+                                     android:hint="Net Weight">
+
+                                     <com.google.android.material.textfield.TextInputEditText
+                                         android:id="@+id/txtNetWtAddItem"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content"
+                                         android:background="@color/gray_bg"
+                                         android:paddingStart="0dp"
+                                         android:paddingEnd="0dp"
+                                         android:fontFamily="@font/proxima_nova_regular"
+                                         android:inputType="numberDecimal"
+                                         android:focusable="false"
+                                         android:maxLength="13"
+                                         android:imeOptions="actionNext"
+                                         />
+
+                                 </com.google.android.material.textfield.TextInputLayout>
+
+                             </LinearLayout>-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvVariationAddlesswt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Variation in %">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtVariationAddlesswt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="numberDecimal"
+                                        android:maxLength="13"
+                                        android:text="0.00"
+                                        android:paddingStart="0dp"
+                                        android:selectAllOnFocus="true"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvFinalwtAddlesswt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_weight="0.5"
+                                    android:enabled="false"
+                                    android:hint="Final Less Weight">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtFinalwtAddlesswt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="numberSigned|numberDecimal"
+                                        android:maxLength="13"
+                                        android:text="0.000"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:singleLine="true" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvItemRateAddlessswt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Item Rate">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtItemRateAddlessswt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="numberDecimal"
+                                        android:text="0.00"
+                                        android:maxLength="13"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:selectAllOnFocus="true"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvPerAddlesswt"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Per"
+                                    app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                                    app:endIconMode="custom"
+                                    app:endIconTint="@color/drop_down_arrow_color">
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        android:id="@+id/txtPerAddlesswt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textCapWords|textNoSuggestions"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvItemAmtAddlesswt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:enabled="false"
+                                android:hint="Item Amount">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtItemAmtAddlesswt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="13"
+                                    android:text="0.00"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:selectAllOnFocus="true"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvLabourRateAddlessswt"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Labour Rate">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtLabourRateAddlessswt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="numberDecimal"
+                                        android:text="0.00"
+                                        android:maxLength="13"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:selectAllOnFocus="true"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvLabourPerAddlesswt"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Per"
+                                    app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                                    app:endIconMode="custom"
+                                    app:endIconTint="@color/drop_down_arrow_color">
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        android:id="@+id/txtLabourPerAddlesswt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textCapSentences|textNoSuggestions"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvLabourAmtAddlesswt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:enabled="false"
+                                android:hint="Labour Amount">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtLabourAmtAddlesswt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="13"
+                                    android:text="0.00"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvTotalAmountAddItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:enabled="false"
+                                android:hint="Total Amount">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtTotalAmountAddItem"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="16"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnSaveAdd_AddLessWeight"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:gravity="center"
+                    android:text="@string/save_add"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <Space
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnSaveCloseAddLessWeight"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@android:color/darker_gray"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:gravity="center"
+                    android:text="@string/save_close"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

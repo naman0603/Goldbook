@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--    <item-->
+    <!--        android:id="@+id/action_code"-->
+    <!--        android:title="Show QR Code"-->
+    <!--        app:showAsAction="never"/>-->
+    <!--    <item-->
+    <!--        android:id="@+id/action_share"-->
+    <!--        android:title="Share Link"-->
+    <!--        app:showAsAction="never"/>-->
+    <!--    <item-->
+    <!--        android:id="@+id/action_send"-->
+    <!--        android:title="Send e-Sign SMS"-->
+    <!--        app:showAsAction="never"/>-->
+    <!--    <item-->
+    <!--        android:id="@+id/action_preview"-->
+    <!--        android:title="Preview"-->
+    <!--        app:showAsAction="never"/>-->
+    <item
+        android:id="@+id/action_share"
+        android:title="Share via"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sharesubmenuitem1"
+                android:title="SMS"></item>
+            <item
+                android:id="@+id/sharesubmenuitem2"
+                android:title="WHATSAPP"></item>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_print"
+        android:title="Print"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/printsubmenuitem1"
+                android:title="Print Chithi Format"
+                android:visible="true"></item>
+            <item
+                android:id="@+id/printsubmenuitem2"
+                android:title="Print Retail Format"
+                android:visible="true"></item>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_download"
+        android:title="Download"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/downloadsubmenuitem1"
+                android:title="Download Chithi Format"></item>
+            <item
+                android:id="@+id/downloadsubmenuitem2"
+                android:title="Download Retail Format"
+                android:visible="true"></item>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_delete"
+        android:title="Delete"
+        android:visible="false"
+        app:showAsAction="never" />
+</menu>

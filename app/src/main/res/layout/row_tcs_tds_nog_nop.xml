@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardtcstds_nog_nop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/gray_bg"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_7sdp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+
+                            <ImageView
+                                android:id="@+id/imgRight2nognop"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:padding="@dimen/_3sdp"
+                                android:src="@drawable/ic_edit"
+                                android:layout_marginEnd="@dimen/_40sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"/>
+
+
+                            <ImageView
+                                android:id="@+id/imgRightnognop"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:padding="@dimen/_3sdp"
+                                android:src="@drawable/ic_delete_icon"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"/>
+
+
+
+                            <TextView
+                                android:id="@+id/txtSectionnognop"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@android:color/black"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_16sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Sales of goods"
+                                android:gravity="center_vertical"
+                                android:layout_toStartOf="@id/imgRight2nognop"/>
+
+
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_2sdp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtSectionLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.45"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="Section:"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <TextView
+                                android:id="@+id/txtSectionValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.55"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_AI_row2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_2sdp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtRateIndividualName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.45"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="Rate (individual):"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <TextView
+                                android:id="@+id/txtRateIndividualValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.55"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_AI_row3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_2sdp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtRateOtherName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.45"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="Rate (other):"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <TextView
+                                android:id="@+id/txtRateOtherValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.55"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_AI_row4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_2sdp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtContactNotesLabel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.45"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="Notes:"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <TextView
+                                android:id="@+id/txtContactNotesValue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.55"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:text=""
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_shipping_other_address"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_14sdp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

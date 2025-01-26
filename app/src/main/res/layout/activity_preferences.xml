@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_layout" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/llNewChequeBookActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tvDisableCreditLimit"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="@dimen/_15sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="@string/setting_preference_enablechequetext"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                        android:id="@+id/switchDisableCreditLimit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tvStopTransaction"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Round off total to the nearest whole number for sales transactions."
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/SwitchStopTransaction"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvTermBalance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:hint="Set term of balance?">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtTermBalance"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:clickable="true"
+                                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_white"
+                                    android:drawableTint="@color/drop_down_arrow_color"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:onClick="onClick"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:text="Debit Credit (Dr/Cr)" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvPrintCopies"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:visibility="gone"
+                                android:hint="Default print copies?">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtPrintCopies"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:clickable="true"
+                                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_white"
+                                    android:drawableTint="@color/drop_down_arrow_color"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:onClick="onClick"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:text="" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+        <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSaveSettingPreferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:padding="@dimen/_5sdp"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp"
+            app:fabRippleColor="@color/gray_text"
+            app:fabElevation="5dp"
+            app:fabIconPosition="start"
+            app:fabSizes="normal"
+            app:fabType="circle" />
+    </RelativeLayout>
+</layout>

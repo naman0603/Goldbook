@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+
+        <LinearLayout
+            android:id="@+id/ll_row_cbr_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+
+            <LinearLayout
+                android:id="@+id/linear_cbr_row_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/cbr_tv_cash_ledger_name"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="$cashLedgerName"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:textSize="@dimen/_12sdp"/>
+               <!-- <TextView
+                    android:id="@+id/cbr_tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@android:color/black"
+                    android:text="01-May-2021"
+                    android:fontFamily="@font/proxima_nova_bold"
+                    android:textSize="@dimen/_12sdp"/>-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_cashbank_report"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@android:color/black"/>
+                <LinearLayout
+                    android:id="@+id/cbr_ll_total"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cbr_tv_totallabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_12sdp"/>
+
+
+                    <TextView
+                        android:id="@+id/cbr_tv_totalvalue"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="₹ 50,00,000.00 Dr"
+                        android:textAlignment="textEnd"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_12sdp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cbr_ll_subtotal"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cbr_tv_subtotallabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sub-Total:"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_12sdp"/>
+                    <TextView
+                        android:id="@+id/cbr_tv_subtotal_nw"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="N.W.: 9999.999"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_12sdp"/>
+
+
+                    <TextView
+                        android:id="@+id/cbr_tv_subtotal_fw"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="F.W.: 9999.999"
+                        android:textAlignment="textEnd"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_12sdp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@android:color/black"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

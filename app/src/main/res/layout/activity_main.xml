@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <include
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:itemTextColor="@color/drawer_item_selector"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/nav_header_main" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/lldrawerRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCompanyListDrawer"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:id="@+id/lldrawerItemsRoot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_10sdp">
+                            <LinearLayout
+                                android:id="@+id/linearDrawerCurrentCompanyDetails"
+                                android:visibility="gone"
+                                style="@style/CustomNavigationItemStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_organizations" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Current Company Details"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/linearDrawerCurrentBranchDetails"
+                                android:visibility="gone"
+                                style="@style/CustomNavigationItemStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_branches" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Current Branch Details"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerDashboard"
+                                style="@style/CustomNavigationItemStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_dashboard_new" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                   android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Dashboard"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerCustomer"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:weightSum="1"
+                                style="@style/CustomNavigationItemStyle"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:layout_weight="0.12"
+                                    android:src="@drawable/ic_customers" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Customers"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerSupplier"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                style="@style/CustomNavigationItemStyle"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:background="?attr/selectableItemBackground">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_suppliers" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Suppliers"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerItems"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:weightSum="1"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:layout_weight="0.12"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_items" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Items"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerSales"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_sales" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Sale"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerPurchase"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_purchase" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Purchase"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerReceipt"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_receipt" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Receipt"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerPayment"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_payment" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Payment / Issue"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/linearDrawerLedger"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_ledger" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Ledgers"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerGroups"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_ledger_group" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Ledger Groups"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerOpeningStock"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1"
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/stock" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Opening Stock"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/linearDrawerReports"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:weightSum="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:background="?attr/selectableItemBackground">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_reports" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Reports"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:background="?attr/selectableItemBackground">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_refer_frnd_gray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Refer a friend"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/linearDrawerSettings"
+                                android:visibility="gone"
+                                android:weightSum="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                style="@style/CustomNavigationItemStyle"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:background="?attr/selectableItemBackground">
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.12"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_setting" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.88"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="Settings"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:textColor="@color/blackcolor"
+                                    android:textSize="@dimen/_14sdp" />
+
+                            </LinearLayout>
+
+                            <Space
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/btnBackToLogin"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                app:cardBackgroundColor="@color/colorPrimary"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:cardElevation="0dp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:focusable="true"
+                                android:clickable="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_16sdp"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_sign_out"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Log out"
+                                        android:textSize="@dimen/_13sdp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:textColor="@android:color/white"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/proxima_nova_bold"
+                                        android:gravity="center"/>
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

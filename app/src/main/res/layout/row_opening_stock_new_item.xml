@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/llrowOpeningStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_7sdp"
+        android:gravity="center_vertical">
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/tvrowOpenStockPiecesNewItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textSize="@dimen/_14sdp"/>
+        <TextView
+            android:id="@+id/tvrowOpenStockTotalNewItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textSize="@dimen/_14sdp"/>
+
+     <!--   <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@android:color/black"/>
+-->
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

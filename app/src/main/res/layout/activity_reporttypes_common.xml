@@ -1,0 +1,1782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout" />
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rlRoot_report_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/llRepTCommonRoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llRepoTContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tvRepoTAllContacts"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Contacts"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_15sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchAllContacts"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvRepoTContactTOC"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="Type of Contacts"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <RadioGroup
+                                android:id="@+id/rGRepoTTypeOfContact"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/rbRepoTAllCust"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Customers"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbRepoTAllSupp"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Suppliers"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbRepoTBoth"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Both"
+                                    android:textSize="@dimen/_14sdp" />
+
+
+                            </RadioGroup>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRepoTSelContact"
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Select Contact"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtRepoTSelContact"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:ellipsize="end"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTContactFromDate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="From Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTContactFromDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:cursorVisible="false"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTContactToDate"
+                                    android:layout_width="0dp"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="To Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTContactToDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRepoTStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tvRepoTAllItemCategories"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Item Categories"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchAllItemCategories"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRepoTSelItemCat"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Select Item Category"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtRepoTSelItemCat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:ellipsize="end"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ly_stock_all_item"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tvRepoTAllItems"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Items"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchAllItems"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRepoTSelItems"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Select Item"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtRepoTSelItems"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:ellipsize="end"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTStockFromDate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="From Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTStockFromDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTStockToDate"
+                                    android:layout_width="0dp"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="To Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTStockToDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:background="@color/gray_bg"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRepoTSale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tvRepoTSalesAllContacts"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Contacts"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchSalesAllContacts"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvRepoTSalesTOC"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="Type of Contacts"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <RadioGroup
+                                android:id="@+id/rGRepoTSalesTypeOfContact"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/rbRepoTSalesAllCust"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Customers"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbRepoTSalesAllSupp"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Suppliers"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbRepoTSalesBoth"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Both"
+                                    android:textSize="@dimen/_14sdp" />
+
+
+                            </RadioGroup>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRepoTSalesSelContact"
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Select Contact"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtRepoTSalesSelContact"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:background="@color/gray_bg"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTSalesFromDate"
+                                    android:layout_width="0dp"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="From Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTSalesFromDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTSalesToDate"
+                                    android:layout_width="0dp"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="To Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTSalesToDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:background="@color/gray_bg"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRepoTPurchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tvRepoTPurchaseAllContacts"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Contacts"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchPurchaseAllContacts"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvRepoTPurchaseTOC"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="Type of Contacts"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <RadioGroup
+                                android:id="@+id/rGRepoTPurchaseTypeOfContact"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/rbRepoTPurchaseAllCust"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Customers"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbRepoTPurchaseAllSupp"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Suppliers"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/rbRepoTPurchaseBoth"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Both"
+                                    android:textSize="@dimen/_14sdp" />
+
+
+                            </RadioGroup>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRepoTPurchaseSelContact"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:hint="Select Contact"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtRepoTPurchaseSelContact"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTPurchaseFromDate"
+                                    android:layout_width="0dp"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="From Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTPurchaseFromDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTPurchaseToDate"
+                                    android:layout_width="0dp"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="To Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTPurchaseToDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:background="@color/gray_bg"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRepoTDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRepoTDayPeriod"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_weight="0.5"
+                                android:hint="Period"
+                                android:textSize="@dimen/_12sdp"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtRepoTDayPeriod"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:clickable="true"
+                                    android:focusable="false"
+                                    android:cursorVisible="false"
+                                    android:focusableInTouchMode="false"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapSentences|textNoSuggestions" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTDayFromDate"
+                                    android:layout_width="0dp"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:enabled="false"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="From Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTDayFromDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTDayToDate"
+                                    android:layout_width="0dp"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:enabled="false"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="To Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTDayToDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRepoTCashBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tvRepoTCashBankAllCashLedgers"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Ledgers"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchAllCashLedgers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRepoTSelCashLedger"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_height="wrap_content"
+                                android:hint="Select  Ledger"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtRepoTSelCashLedger"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="1"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tvRepoTCashBankAllBankLedgers"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Bank Ledgers"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchAllBankLedgers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRepoTSelBankLedger"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_height="wrap_content"
+                                android:hint="Select Bank Ledger"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtRepoTSelBankLedger"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTCashBankFromDate"
+                                    android:layout_width="0dp"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="From Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTCashBankFromDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTCashBankToDate"
+                                    android:layout_width="0dp"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="To Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTCashBankToDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRepoTLedger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/tvRepoTAllLedgers"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="All Ledgers"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchAllLedgers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"
+
+                                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvRepoTLedger"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_height="wrap_content"
+                                android:hint="Select Ledger"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtRepoTLedger"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTLedgerFromDate"
+                                    android:layout_width="0dp"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="From Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTLedgerFromDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvRepoTLedgerToDate"
+                                    android:layout_width="0dp"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:hint="To Date">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtRepoTLedgerToDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="date"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnRepoTGenerateReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_34sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:gravity="center"
+                        android:text="@string/generatereport"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_13sdp" />
+                    <!--<ProgressBar
+                        android:id="@+id/progress"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_marginTop="48dp"
+                        android:layout_below="@+id/btn_download"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />-->
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- <TextView
+                     android:id="@+id/progress_text"
+                     android:layout_below="@+id/progress"
+                     android:textAlignment="center"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />-->
+
+
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/progressBar_RepoTCommon"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="?android:attr/progressBarStyle"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ll_generated_report_ns"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/generated_report_ns"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <LinearLayout
+                    android:id="@+id/ll_GR_root"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:clickable="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/gr_tv_companyname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$companyName"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_16sdp"/>
+
+                        <TextView
+                            android:id="@+id/gr_tv_branchname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$branchName"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_14sdp"/>
+                        <TextView
+                            android:id="@+id/gr_from_to_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Period: $fromDate to $toDate"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/spr_stock_total"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 category, 4 items"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_12sdp"/>
+                    <View
+                        android:id="@+id/headerLine"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@android:color/black"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/gr_ll_openingbal"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gr_contact_firstcolumn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Opng Bal.:"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:id="@+id/gr_contact_secondcolumn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="999.999 Dr"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+                        <TextView
+                            android:id="@+id/gr_contact_thirdcolumn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="₹99,999.00 Dr"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textAlignment="textEnd"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gr_ll_openingbalLedger"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gr_ledger_firstcolumn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:id="@+id/gr_ledger_secondcolumn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+                        <TextView
+                            android:id="@+id/gr_ledger_thirdcolumn"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textAlignment="textEnd"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_gr_stock"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_gr_cashbankbook"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_gr_day"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_gr_salepurchase"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_gr_contact"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+
+                    <LinearLayout
+                        android:id="@+id/gr_ll_contact_total_n_closingbal"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <View
+                            android:visibility="visible"
+                            android:id="@+id/gr_contact_total_topline"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@android:color/black"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="3"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/gr_contact_total_label"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Total:"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:id="@+id/gr_contact_total_finewt"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="F.W.: 9999.999"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+                            <TextView
+                                android:id="@+id/gr_contact_total_amount"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="₹99,99,999.00"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textAlignment="textEnd"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/gr_ll_contact_total_n_closingbal_secondrow"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="3"
+                            android:paddingTop="@dimen/_3sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Closing Bal.:"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:id="@+id/gr_contact_closing_finewt"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="F.W.: 9999.999"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+                            <TextView
+                                android:id="@+id/gr_contact_closing_amount"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="₹99,99,999.00"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textAlignment="textEnd"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/black"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_gr_grandtotal"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/gr_tv_grandtotal_label"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:textColor="@android:color/black"
+                            android:text="Grand-Total:"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="3"
+                            android:paddingTop="@dimen/_3sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/gr_tv_grandtotal_firstcolumn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="N.W.: 9999.999"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                            <TextView
+                                android:id="@+id/gr_tv_grandtotal_secondcolumn"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="F.W.: 9999.999"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+                            <TextView
+                                android:id="@+id/gr_tv_grandtotal_thirdcolumn"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="₹99,99,999.00"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:textAlignment="textEnd"
+                                android:textColor="@android:color/black"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@android:color/black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </androidx.core.widget.NestedScrollView>
+            <TextView
+                android:id="@+id/tvNoEntries"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_entries_found"
+                android:textSize="@dimen/_16sdp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/proxima_nova_regular"
+                />
+            <ProgressBar
+                android:id="@+id/progressBar_generated_report"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="?android:attr/progressBarStyle"
+                />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</layout>

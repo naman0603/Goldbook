@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardItemRowCust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/gray_bg"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp"
+                android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_7sdp"
+                android:gravity="center_vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvNameRowAllItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gents Rings"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_14sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvStockRowAllItem"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stock:  104.050 gms"
+                        android:textColor="@color/gray_text"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/lngrosswt"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvGrossWtItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textColor="@color/gray_text"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <!-- <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="."
+                             android:layout_marginStart="@dimen/_5sdp"
+                             android:layout_marginEnd="@dimen/_5sdp"
+                             android:textColor="@color/gray_bg"
+                             android:fontFamily="@font/proxima_nova_regular"
+                             android:textSize="@dimen/_12sdp"/>-->
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_blue_dot_12dp"
+                            android:layout_gravity="center_vertical"
+                            app:tint="@android:color/darker_gray"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:id="@+id/tvNetWtItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textColor="@color/gray_text"
+                            android:textSize="@dimen/_12sdp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,168 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.goldbookapp"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 38
+        versionName "3.6"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        dataBinding {
+            enabled = true
+        }
+    }
+    signingConfigs {
+        release {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            testCoverageEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        /*  release {
+              minifyEnabled false
+              proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+          }*/
+        debug {
+            debuggable true
+            minifyEnabled false
+            //shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
+    implementation 'androidx.preference:preference:1.2.0'
+
+
+    //material
+    implementation 'com.google.android.material:material:1.2.0'
+
+
+    //lifecycle
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation "android.arch.lifecycle:viewmodel:1.1.1"
+    implementation 'androidx.lifecycle:lifecycle-common:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.2.0'
+    //  implementation 'android.arch.lifecycle:extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // okHttp
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
+
+    // ktx
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
+
+    //material dialog
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // ImagePicker - Crop
+    implementation 'com.github.dhaval2404:imagepicker:1.7.5'
+
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
+    implementation 'com.blankj:utilcodex:1.29.0'
+
+    implementation "com.mikepenz:materialdrawer:8.1.6"
+    // Add for NavController support
+    implementation "com.mikepenz:materialdrawer-nav:8.1.6"
+
+// Add for Android-Iconics support
+    implementation "com.mikepenz:materialdrawer-iconics:8.1.6"
+
+    implementation "com.leinardi.android:speed-dial:3.1.1"
+    implementation 'com.aurelhubert:ahbottomnavigation:2.3.4'
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+// jsoup
+    implementation 'org.jsoup:jsoup:1.13.1'
+
+// lock screen support
+    //Lollipin
+    /* implementation ('com.github.omadahealth:lollipin:2.1.0@aar') {
+         transitive = true
+     }*/
+    implementation 'com.github.traex.rippleeffect:ripple:1.3.1-OG'
+    implementation 'uk.me.lewisdeane.ldialogs:ldialogs:1.2.0@aar'
+    implementation 'com.github.omadahealth.typefaceview:typefaceview:1.5.0@aar'
+
+    implementation 'org.apache.commons:commons-io:1.3.2'
+// prevent double click
+    implementation 'hk.ids.gws.android.sclick:library:1.0'
+
+    // month year custom dialog
+    implementation 'com.whiteelephant:monthandyearpicker:1.3.0'
+
+    // searchable spinner
+    implementation 'com.github.zeeshan5422:Searchable-Spinner-Kotlin:v1.0'
+    // floating action button
+    implementation "com.robertlevonyan.view:CustomFloatingActionButton:3.0.0"
+
+    implementation 'com.github.hamzasharuf:NetworkMonitor:1.1'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+    //update app
+    //implementation 'com.google.android.play:core-ktx:1.10.2'
+    implementation 'com.google.android.play:app-update-ktx:2.0.1'
+//Review app
+    implementation 'com.google.android.play:review-ktx:2.0.1'
+    //QR Code Scanner
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+
+
+
+}

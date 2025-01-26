@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_5sdp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="₹ Metal Rate"
+                        android:gravity="start"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textColor="@color/header_black_text"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:textSize="@dimen/_16sdp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:text="Enter metal rate of 1 unit."
+                        android:gravity="start"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:textColor="@color/header_black_text"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_12sdp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/gray_bg"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:weightSum="1"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvDashCashRate"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.80"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:hint="Gold Rate">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtDashCashRate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:singleLine="true"
+                                android:maxLength="15"
+                                android:focusableInTouchMode="true"
+                                android:focusable="true"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="numberDecimal"
+                                android:imeOptions="actionDone"  />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <RadioButton
+                            android:id="@+id/radioDashCashRate"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:text="@null"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:scaleX="1.0"
+                            android:scaleY="1.0"
+
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:buttonTint="@color/colorPrimary"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:weightSum="1"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvDashBillRate"
+                            android:layout_width="0dp"
+
+                            android:layout_weight="0.80"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:hint="Silver Rate">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtDashBillRate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:maxLength="15"
+                                android:singleLine="true"
+                                android:focusableInTouchMode="true"
+                                android:focusable="true"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="numberDecimal"
+                                android:imeOptions="actionDone"  />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <RadioButton
+                            android:id="@+id/radioDashBillRate"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:text="@null"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:scaleX="1.0"
+                            android:scaleY="1.0"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:buttonTint="@color/colorPrimary"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:weightSum="1"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_weight="0.4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+                        <LinearLayout
+                            android:paddingTop="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_weight="0.6"
+                            android:weightSum="2"
+                            android:layout_width="0dp"
+                            android:gravity="end"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvDashCancel"
+                                android:visibility="gone"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:layout_height="wrap_content"
+                                android:text="CANCEL"
+                                android:textColor="@color/header_black_text"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_13sdp"/>
+                            <TextView
+                                android:id="@+id/tvDashSave"
+                                android:visibility="gone"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="SAVE"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:fontFamily="@font/proxima_nova_bold"
+                                android:textSize="@dimen/_13sdp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

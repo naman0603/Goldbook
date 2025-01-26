@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:padding="@dimen/_5sdp"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+            <!--            <com.google.android.material.card.MaterialCardView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                -->
+            <!--                app:cardCornerRadius="@dimen/_10sdp"-->
+            <!--                android:layout_gravity="center_vertical">-->
+
+            <LinearLayout
+                android:background="@drawable/bg_round_rect_ripple_effect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
+                android:weightSum="1"
+                android:gravity="start">
+
+
+
+
+                <TextView
+                    android:id="@+id/tvrowSelectedVendor"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.93"
+                    android:layout_height="wrap_content"
+                    android:text="Vendor Name"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_13sdp"/>
+
+                <ImageView
+                    android:id="@+id/deleteVendor"
+                    android:src="@drawable/minus_icon_new"
+                    android:layout_weight="0.07"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"/>
+
+
+
+            </LinearLayout>
+
+            <!--            </com.google.android.material.card.MaterialCardView>-->
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>

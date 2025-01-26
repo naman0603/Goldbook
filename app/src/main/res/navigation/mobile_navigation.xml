@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.goldbookapp.ui.ui.home.DashboardFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_dashboard" />
+
+
+    <fragment
+        android:id="@+id/nav_customers"
+        android:name="com.goldbookapp.ui.ui.gallery.CustomersFragment"
+        android:label="@string/customers"
+        tools:layout="@layout/fragment_customers" />
+
+    <fragment
+        android:id="@+id/nav_supplier"
+        android:name="com.goldbookapp.ui.fragment.SupplierFragment"
+        android:label="@string/supplier"
+        tools:layout="@layout/fragment_supplier" />
+
+    <fragment
+        android:id="@+id/nav_items"
+        android:name="com.goldbookapp.ui.ui.slideshow.ItemsFragment"
+        android:label="@string/items"
+        tools:layout="@layout/fragment_items" />
+
+    <fragment
+        android:id="@+id/nav_sale"
+        android:name="com.goldbookapp.ui.fragment.SaleFragment"
+        android:label="@string/sale"
+        tools:layout="@layout/fragment_sale" />
+
+    <fragment
+        android:id="@+id/nav_purchase"
+        android:name="com.goldbookapp.ui.ui.share.PurchaseFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_purchase" />
+
+    <fragment
+        android:id="@+id/nav_receipt"
+        android:name="com.goldbookapp.ui.ui.send.ReceiptFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_receipt" />
+
+    <fragment
+        android:id="@+id/nav_payment"
+        android:name="com.goldbookapp.ui.ui.send.PaymentFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/nav_ledger"
+        android:name="com.goldbookapp.ui.fragment.LedgerFragment"
+        android:label="@string/supplier"
+        tools:layout="@layout/fragment_leadger" />
+
+    <fragment
+        android:id="@+id/nav_groups"
+        android:name="com.goldbookapp.ui.fragment.GroupsFragment"
+        android:label="@string/supplier"
+        tools:layout="@layout/fragment_groups"
+        />
+
+    <fragment
+        android:id="@+id/nav_reports"
+        android:name="com.goldbookapp.ui.ui.send.ReportsFragment"
+        android:label="Reports"
+        tools:layout="@layout/fragment_reports" />
+
+    <fragment
+        android:id="@+id/nav_openingstock"
+        android:name="com.goldbookapp.ui.ui.send.OpeningStockFragment"
+        android:label="Opening Stocks"
+        tools:layout="@layout/fragment_opening_stock" />
+
+
+</navigation>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include layout="@layout/toolbar_layout"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardBillingCompAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/gray_bg"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center_vertical">
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvOfficeCompAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="Office, Building, Apartment">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtOfficeCompAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:maxLength="30"
+
+                                android:inputType="textCapWords|textNoSuggestions"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvAreaCompAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            android:hint="Area, Colony, Street, Sector">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtAreaCompAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:maxLength="30"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="textCapWords|textNoSuggestions"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvLandmarkCompAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            android:hint="Landmark">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtLandmarkCompAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:maxLength="30"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="textCapWords|textNoSuggestions"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvCountryCompAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            android:hint="Country/Region"
+                            app:endIconMode="custom"
+                            app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                            app:endIconTint="@color/drop_down_arrow_color">
+
+                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/txtCountryCompAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="textCapSentences|textNoSuggestions"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvStateCompAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                            android:hint="State/Union Territory"
+                            app:endIconMode="custom"
+                            app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                            app:endIconTint="@color/drop_down_arrow_color">
+
+                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/txtStateCompAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="textCapSentences|textNoSuggestions"
+                                android:imeOptions="actionNext"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvCityCompAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:hint="City"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                app:endIconMode="custom"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                app:endIconTint="@color/drop_down_arrow_color">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtCityCompAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:singleLine="true"
+                                    android:ellipsize="end"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="textCapSentences|textNoSuggestions"
+                                    android:imeOptions="actionNext"
+                                    />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvPincodeCompAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            android:hint="PIN Code">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtPincodeCompAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gray_bg"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:imeOptions="actionDone"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+        <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSaveAddressCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:padding="@dimen/_5sdp"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp"
+            app:fabRippleColor="@color/gray_text"
+            app:fabElevation="5dp"
+            app:fabIconPosition="start"
+            app:fabSizes="normal"
+            app:fabType="circle" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+    <LinearLayout
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/llTransName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/chbTransName"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:checked="true"
+            android:gravity="center_vertical"
+            android:textColor="#000"
+            android:text="" />
+
+    </LinearLayout>
+</layout>

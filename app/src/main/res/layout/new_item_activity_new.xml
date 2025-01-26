@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_layout" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+               >
+
+                <LinearLayout
+                    android:id="@+id/llNewItemActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/proxima_nova_regular"
+                                android:text="Item Type"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <RadioGroup
+                                android:id="@+id/radiogroupItemType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioGoods"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimary"
+                                    android:checked="true"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Goods"
+                                    android:textColor="@color/drop_down_arrow_color"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioService"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:buttonTint="@color/colorPrimary"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:text="Service"
+                                    android:textColor="@color/drop_down_arrow_color"
+                                    android:textSize="@dimen/_12sdp" />
+
+                            </RadioGroup>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvCodeNewItem"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="0.5"
+
+                                    android:hint="Code">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/txtCodeNewItem"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:inputType="textCapCharacters"
+                                        android:maxLength="13"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp"
+                                        android:singleLine="true" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5">
+
+                                    <ImageView
+                                        android:id="@+id/imgNewItem"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_gravity="center_horizontal"
+                                        android:adjustViewBounds="true"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/tvUploadPhotoAllItem"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:gravity="center"
+                                        android:text="Upload Photos"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/_14sdp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvItemNameNewItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+
+                                android:hint="Item Name">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtItemNameNewItem"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:inputType="textCapWords|textNoSuggestions"
+                                    android:maxLength="30"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp"
+                                    android:singleLine="true" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/lyCatNewItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvCategoryNewItem"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_weight="0.85"
+                                    android:hint="Category"
+                                    app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white_24dp"
+                                    app:endIconMode="custom"
+                                    app:endIconTint="@color/drop_down_arrow_color">
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        android:id="@+id/txtCategoryNewItem"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textCapSentences|textNoSuggestions"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                                <ImageView
+                                    android:id="@+id/imgCategoryAddItem"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_weight="0.15"
+                                    android:src="@drawable/ic_plus" />
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvDiscontLedgerNewItem"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Discount Ledger"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                                app:endIconMode="custom"
+                                app:endIconTint="@color/drop_down_arrow_color"
+                                >
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:id="@+id/txtDiscountLedgerNewItem"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:clickable="true"
+                                    android:focusable="false"
+                                    android:cursorVisible="false"
+                                    android:focusableInTouchMode="false"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapSentences|textNoSuggestions"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <TextView
+                        android:id="@+id/tvShowInfoNewItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:text="Show more information"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/lyMoreInfoNewItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardMetalUnitNewItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/lyMetalStock"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvMetaltypeNewItem"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Metal Type"
+                                    app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                                    app:endIconMode="custom"
+                                    app:endIconTint="@color/drop_down_arrow_color">
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        android:id="@+id/txtMetaltypeNewItem"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textCapSentences|textNoSuggestions"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvStockMaintainNewItem"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Maintain Stock "
+                                    app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                                    app:endIconMode="custom"
+                                    app:endIconTint="@color/drop_down_arrow_color">
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        android:id="@+id/txtStockMaintainNewItem"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textCapSentences|textNoSuggestions"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lyUnitStudded"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvUnitNewItem"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Unit"
+                                    app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                                    app:endIconMode="custom"
+                                    app:endIconTint="@color/drop_down_arrow_color">
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        android:id="@+id/txtUnitNewItem"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textCapSentences|textNoSuggestions"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/tvStudedNewItem"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_weight="0.5"
+                                    android:hint="Is Studded"
+                                    app:endIconDrawable="@drawable/ic_keyboard_arrow_down_white"
+                                    app:endIconMode="custom"
+                                    app:endIconTint="@color/drop_down_arrow_color">
+
+                                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                        android:id="@+id/txtStuddedNewItem"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/gray_bg"
+                                        android:clickable="true"
+                                        android:focusable="false"
+                                        android:cursorVisible="false"
+                                        android:focusableInTouchMode="false"
+                                        android:fontFamily="@font/proxima_nova_regular"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textCapSentences|textNoSuggestions"
+                                        android:paddingStart="0dp"
+                                        android:paddingEnd="0dp" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardAccountInfoNewItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvAccountInfoNewItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:gravity="center_horizontal"
+                            android:padding="@dimen/_10sdp"
+                            android:text="+ Accounting Information"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardInventoryInfoNewItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvInventoryInfoNewItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:gravity="center_horizontal"
+                            android:padding="@dimen/_10sdp"
+                            android:text="+ Inventory Information"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/gray_bg"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvNotesNewItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:hint="Notes">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txtNotesNewItem"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray_bg"
+                                    android:fontFamily="@font/proxima_nova_regular"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textCapSentences|textNoSuggestions"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="0dp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+            android:id="@+id/btnSave_AddItem_New"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:onClick="onClick"
+            android:padding="@dimen/_5sdp"
+            android:text="Save Item"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp"
+            app:fabElevation="5dp"
+            app:fabIconPosition="start"
+            app:fabRippleColor="@color/gray_text"
+            app:fabSizes="normal"
+            app:fabType="circle" />
+
+
+    </RelativeLayout>
+</layout>

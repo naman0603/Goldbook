@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/row_cbr_trans_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@android:color/black"
+            android:text="01-May-2021"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:textSize="@dimen/_12sdp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cashbank_trans"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/row_cashbank_subtrans"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+
+    </LinearLayout>
+
+</layout>

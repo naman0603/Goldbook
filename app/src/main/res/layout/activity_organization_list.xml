@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <include layout="@layout/toolbar_layout"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="match_parent">
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewOrgs"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+            <TextView
+                android:id="@+id/tvNoRecordOrgs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_record_found"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:visibility="gone"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                style="@style/Widget.MaterialComponents.FloatingActionButton"
+                android:id="@+id/addOrg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_15sdp"
+                app:backgroundTint="@color/colorPrimary"
+                android:elevation="0dp"
+                app:elevation="0dp"
+                app:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_add_white_24dp"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</layout>

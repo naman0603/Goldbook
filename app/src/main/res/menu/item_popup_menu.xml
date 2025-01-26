@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Sort By"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/actionNameItem"
+        android:title="Name"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/actionSrockItem"
+        android:title="Stock-in-Hand"
+        app:showAsAction="never"/>
+</menu>

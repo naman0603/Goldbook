@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="profileViewModel"
+            type="com.goldbookapp.ui.activity.viewmodel.ProfileViewModel" />
+
+    </data>
+
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_20sdp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/gray_bg"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="top">
+
+                    <ImageView
+                        android:id="@+id/img_Right"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_call"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+                      <TextView
+                          android:id="@+id/tvNameContactInfo"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Parth Soni"
+                          android:textColor="@android:color/black"
+                          android:fontFamily="@font/proxima_nova_bold"
+                          android:layout_marginBottom="@dimen/_4sdp"
+                          android:textSize="@dimen/_14sdp"/>
+                      <TextView
+                          android:id="@+id/tvMobileNumberContactInfo"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="+91 9876543210"
+                          android:layout_marginBottom="@dimen/_4sdp"
+                          android:textColor="@color/gray_text"
+                          android:fontFamily="@font/proxima_nova_regular"
+                          android:textSize="@dimen/_12sdp"/>
+                      <TextView
+                          android:id="@+id/tvEmailContactInfo"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="parth@soni.com"
+
+                          android:textColor="@color/gray_text"
+                          android:fontFamily="@font/proxima_nova_regular"
+                          android:textSize="@dimen/_12sdp"/>
+
+
+                  </LinearLayout>
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardContactInfoAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/gray_bg"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="top">
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_address"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:textSize="@dimen/_14sdp"/>
+                        <TextView
+                            android:id="@+id/tvAddressContactInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/gray_bg"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="top">
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_info"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="More Information"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:textSize="@dimen/_14sdp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Credit limit (Fine)"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+                        <TextView
+                            android:id="@+id/tvCreditFineContactInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_height="wrap_content"
+                            android:text="200.00 gm"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Credit limit (Cash)"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+                        <TextView
+                            android:id="@+id/tvCreditCashContactInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100,000,00"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+                        <TextView
+                            android:id="@+id/tvPreferredVendorLabelContactInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Preferred Courier"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+                        <TextView
+                            android:id="@+id/tvPreferredVendorContactInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="200.00 gm"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+                        <TextView
+                            android:id="@+id/tvNotesLabelContactInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notes"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:textSize="@dimen/_12sdp"/>
+                        <TextView
+                            android:id="@+id/tvNotesContactInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="200.00 gm"
+                            android:textColor="@color/gray_text"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+</layout>

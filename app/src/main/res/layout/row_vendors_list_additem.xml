@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="loginModel"
+            type="com.goldbookapp.model.LoginModel" />
+
+    </data>
+    <LinearLayout
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/llVendorName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/VendorName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_14sdp"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="@string/vendor_name"
+             />
+
+        <CheckBox
+            android:id="@+id/chbVendor"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+             />
+
+    </LinearLayout>
+</layout>
